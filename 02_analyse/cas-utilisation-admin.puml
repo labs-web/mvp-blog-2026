@@ -3,40 +3,38 @@ left to right direction
 actor "Auteur" as Author
 actor "Administrateur" as Admin
 
-' Règle 4.1 : Héritage systématique
 Author <|-- Admin
 
-package "Back-Office (Admin Panel)" {
-  usecase "Gérer les Articles" as UC_Manage
-  usecase "Uploader une image" as UC_Upload
-  usecase "Soumettre un article (Workflow)" as UC_Submit
+package "Back-Office (Admin)" {
+  ' --- 1. Espace Commun ---
   usecase "Voir le Dashboard (Stats)" as UC_Dashboard
-  
-  usecase "Valider / Publier un article" as UC_Validate
+
+  ' --- 2. Gestion Content ---
+  usecase "Gérer les Articles" as UC_CRUD
+  usecase "Soumettre pour validation" as UC_Submit
+  usecase "Valider & Publier" as UC_Publish
+
+  ' --- 3. Gestion Admin ---
   usecase "Gérer les Catégories" as UC_Cats
   usecase "Gérer les Tags" as UC_Tags
   usecase "Gérer les Utilisateurs" as UC_Users
-  usecase "Attribuer un Rôle" as UC_Roles
-  usecase "Rechercher un Article" as UC_Search
-  usecase "Filtrer (Catégorie/Statut)" as UC_Filter
+  usecase "Attribuer un Rôle (Auteur/Admin)" as UC_Roles
+  usecase "Modérer les Commentaires" as UC_Moderate
 }
 
-' Règle 4.1 : Associations simples (--)
+' Relations Auteur
 Author -- UC_Dashboard
-Author -- UC_Manage
+Author -- UC_CRUD
 
-' Règle 4.2 : Logique Include/Extend
-' Extensions de la gestion d'article
-UC_Upload .> UC_Manage : <<extend>>
-UC_Submit .> UC_Manage : <<extend>>
-UC_Validate .> UC_Manage : <<extend>>
-UC_Search .> UC_Manage : <<extend>>
-UC_Filter .> UC_Manage : <<extend>>
+' Extensions Gérer Articles
+UC_Submit .> UC_CRUD : <<extend>>
+UC_Publish .> UC_CRUD : <<extend>>
 
-' Admin hérite de Auteur, on ajoute seulement le spécifique
+' Relations Admin
 Admin -- UC_Cats
 Admin -- UC_Tags
 Admin -- UC_Users
+Admin -- UC_Moderate
 
 UC_Roles .> UC_Users : <<extend>>
 
