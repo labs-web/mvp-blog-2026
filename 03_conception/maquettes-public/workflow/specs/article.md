@@ -29,7 +29,7 @@
 ### D. Pied de l'Article
 *   **Tags :** Liste horizontale de badges gris (`#Laravel`, `#Backend`).
 
-### E. Zone Commentaires
+### E. Zone Commentaires (`comment-section.html`)
 *   **Titre :** H3 "Commentaires (N)".
 *   **Formulaire :**
     *   Textarea ("Votre avis...").

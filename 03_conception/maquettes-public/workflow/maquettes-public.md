@@ -49,7 +49,8 @@ maquettes-public/
 │   ├── navbar.html
 │   ├── footer.html
 │   ├── card-article.html
-│   └── hero.html
+│   ├── hero.html
+│   └── comment-section.html
 │
 └── assets/                 # Ressources statiques
     ├── css/

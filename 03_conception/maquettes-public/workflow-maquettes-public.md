@@ -21,7 +21,7 @@ Nous suivons une approche modulaire pour garantir la cohérence du design :
     *   **Contenu :** Liste exhaustive des champs, règles de validation, états visuels et interactions.
 
 3.  **Phase 3 : Composants (Design System)**
-    *   Inventaire des briques UI réutilisables dans [`composants-public.md`](./workflow/composants-public.md).
+    *   Inventaire des briques UI réutilisables dans [`composants-public.md`](./components/composants-public.md).
     *   Développement unitaire des composants (Navbar, Card Article, Footer).
 
 4.  **Phase 4 : Intégration (Pages)**
