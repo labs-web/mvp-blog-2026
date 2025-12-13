@@ -1,1 +1,0 @@
-Avant de commencer, lis le fichier prompt.prompt.00_contexte-socles.md et charge son contenu
