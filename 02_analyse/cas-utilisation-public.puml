@@ -1,9 +1,9 @@
 @startuml
 left to right direction
 actor "Visiteur" as Guest
-actor "Auteur" as Author
+actor "Membre" as Member
 
-Guest <|-- Author
+Guest <|-- Member
 
 package "Front-Office (Web Public)" {
   usecase "Consulter la liste des articles" as UC_List
@@ -25,8 +25,8 @@ Guest -- UC_Read
 Guest -- UC_Login
 Guest -- UC_Register
 
-' Relations Auteur (Spécifique)
-Author -- UC_PostComment
+' Relations Membre (Authentifié)
+Member -- UC_PostComment
 
 ' -- Relations <<extend>> (Options) --
 UC_Search .> UC_List : <<extend>>

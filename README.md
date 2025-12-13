@@ -4,7 +4,7 @@ Ce dépôt héberge le code source et la documentation du projet fil rouge pour 
 
 ## 🎯 Objectifs
 
-Ce projet vise à valider les compétences transversales à travers la réalisation d'une plateforme complète de gestion de contenus :
+Ce projet vise à valider les compétences à travers la réalisation d'une plateforme complète de gestion de contenus :
 
 -   **Web Public** : Blog pour les visiteurs (Laravel + Preline UI).
 -   **Web Admin** : Back-office de gestion (Laravel + Spatie Permissions).
@@ -14,20 +14,9 @@ Ce projet vise à valider les compétences transversales à travers la réalisat
 ## 🛠️ Stack Technique
 
 -   **Back-end** : Laravel 11, MySQL.
--   **Front-end** : Blade, Tailwind CSS, Alpine.js.
+-   **Front-end** : Blade, Tailwind CSS, preline UI.
 -   **Mobile** : Kotlin, Jetpack Compose, Retrofit.
 -   **Outils** : Git, Postman.
-
-## 📂 Documentation
-
-### Standards & Contexte (`00_contexte`)
-*   [`01_contexte_etablissement.md`](00_contexte/01_contexte_etablissement.md) : Identité et Règles.
-*   [`02_cadre_pedagogique.md`](00_contexte/02_cadre_pedagogique.md) : Standards techniques de livraison (C1-C7).
-
-### Spécifications (`01_besoin`)
-*   [`02_projet_fil_rouge.md`](01_besoin/02_projet_fil_rouge.md) : Cahier des charges fonctionnel.
-*   [`01_carte_techno_globale.md`](01_besoin/01_carte_techno_globale.md) : Stack technique détaillée.
-*   [`03_versions-prototype.md`](01_besoin/03_versions-prototype.md) : Roadmap détaillée (V3 à V8).
 
 ## 📅 Architecture du Projet
 
@@ -38,4 +27,4 @@ Le projet est développé de manière incrémentale :
 3.  **Écosystème (V7-V8)** : API REST et Application Mobile.
 
 ---
-*Projet réalisé par l'équipe Solicode.*
+*Projet réalisé par le formateur  ESSARRAJ Fouad comme correction de projet de fil rouge*

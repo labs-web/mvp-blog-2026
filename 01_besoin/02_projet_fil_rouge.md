@@ -1,92 +1,123 @@
 ---
 title: "projet_fil_rouge.md"
-version: "v2.0"
-role: "Cahier des Charges — Projet Fil Rouge (Web + API + Mobile)"
+version: "v3.0"
+role: "Cahier des Charges Complet & Détaillé — Projet Fil Rouge"
 related_to:
   - carte_techno_globale.md
-  - referentiel-competences.md
+  - versions-prototype.md
 ---
 
-# 📌 Projet Fil Rouge — Plateforme Web & Mobile
+# 📌 Projet Fil Rouge : "Solicode News"
 
-> **Vision** : Une plateforme complète de gestion de contenus (type Blog), déclinée en Web (Admin/Public), API REST et Application Mobile.
-
-## 1. Objectifs & Contexte d'usage
-1.  **Technique** : Appliquer la stack définie dans `carte_techno_globale.md` (Laravel, Preline, API, Android Compose).
-2.  **Pédagogique** : Servir de **colonne vertébrale** pour valider les compétences C1 à C7.
-3.  **Livrable Multi-Contexte** : 
-    *   **Contexte A (Groupe)** : Déployer le Blog pour le **Centre Solicode** (Travail collaboratif).
-    *   **Contexte B (Individuel)** : Déployer une instance du Blog pour une **Association de Ville** (au choix de l'apprenant, ex: Tanger Culture), pour valider l'autonomie.
+> **Vision** : Développer une plateforme éditoriale moderne (CMS) permettant la création, la gestion et la diffusion d'articles multi-canaux (Web & Mobile). Ce projet sert de colonne vertébrale pour valider l'ensemble des compétences Full Stack.
 
 ---
 
-## 2. Découpage en Prototypes
+## 1. Contexte & Enjeux
 
-Le projet est construit progressivement :
+### 1.1 Le Besoin Métier
+Les organisations (Associations, Établissements de formation comme Solicode) ont besoin de communiquer sur leurs activités via un canal numérique centralisé et maîtrisé. Les réseaux sociaux ne suffisent plus : besoin de référencement, de structuration et d'une identité propre.
 
-### P1 - Socle (N1 - Imiter)
-**Description :** Une version **minimale (S0)** centrée sur les mécanismes de base.
-*   **Objectif :** Acquérir le **strict minimum technique** (Web simple + API GET + Mobile Lecture) pour comprendre les interactions sans complexité métier.
+**La Solution :** Une plateforme de Blog dynamique, sécurisée et scalable, dotée d'une application mobile pour notifier les utilisateurs en temps réel.
 
-### P2 - Prototype (N2 - Adapter)
-**Description :** Une version **fonctionnelle, sécurisée et architecturée**, candidate au MVP.
-*   **Objectif 1 :** Maîtriser toute la stack (Architecture N-Tiers, Spatie Permissions, API Complète).
-*   **Objectif 2 :** Valider les acquis (via Live Coding) et minimiser les risques techniques avant le projet final.
-
-### P3 - MVP (N3 - Transposer)
-**Description :** La version **finale de Production** pour un client réel (Association).
-*   **Objectif :** Transposer les acquis dans un contexte professionnel (Autonomie, Déploiement, Qualité).
+### 1.2 Le Contexte Pédagogique
+Ce projet n'est pas un simple exercice. Il est conçu pour simuler une **mission réelle en entreprise**.
+*   **Contraintes Réelles :** Respect d'un cahier des charges, délais, qualité du code, sécurité.
+*   **Technologies Imposées :** Stack moderne (Laravel 11, Tailwind, Kotlin/Compose).
+*   **Double Cible :** 
+    1.  **Version Groupe :** Déploiement interne pour l'école.
+    2.  **Version Individuelle :** Adaptation pour un "client" réel (Association locale) pour valider le titre.
 
 ---
 
-## 3. Architecture Fonctionnelle
+## 2. Description Fonctionnelle Détaillée
 
-L'application s'articule autour de 4 blocs :
+La plateforme se divise en 4 modules interconnectés.
 
-1.  **Web - Public (Front-Office)**
-    *   Vitrine pour les visiteurs (Lecture seule).
-    *   Liste d'articles, Recherche, Page détail.
-    *   *Techno : Laravel Blade + Preline UI.*
+### 🌐 Module 1 : Le Portail Web Public (Front-Office)
+*L'interface visible par les visiteurs.*
+*   **Page d'Accueil :** Mise en avant des articles récents ("À la une") et grille des derniers posts.
+*   **Navigation :** Menu dynamique par **Catégories** (ex: Tech, Events, Tutos).
+*   **Recherche Avancée :** Barre de recherche en temps réel (AJAX) filtrant par titre ou contenu.
+*   **Lecture Immersive :** Page de détail d'un article avec :
+    *   Image de couverture HD.
+    *   Contenu riche (Markdown ou HTML).
+    *   Auteur et Date de publication.
+    *   Liste des **Tags** associés.
+*   **Espace Social :** Zone de commentaires sous les articles (nécessite connexion).
 
-2.  **Web - Admin (Back-Office)**
-    *   Espace de gestion **sécurisé** (Authentification + Gestion des Rôles).
-    *   **One Page CRUD** : Tableau de bord dynamique avec Recherche, Filtre, Pagination et CRUD sans rechargement de page (AJAX).
-    *   *Techno : Laravel Blade + AJAX (Alpine.js optionnel) + Preline Admin Layouts + Spatie Permissions.*
+### 🛠️ Module 2 : L'Administration (Back-Office)
+*Le centre de contrôle sécurisé pour les gestionnaires.*
+*   **Tableau de Bord (Dashboard) :** KPIs en temps réel (Nombre d'articles, Vues totales, Derniers inscrits).
+*   **Gestion des Articles (Le Cœur) :**
+    *   **Éditeur Riche :** WYSIWYG pour formater le texte.
+    *   **Média Manager :** Upload et gestion des images associées.
+    *   **Workflow de Publication :**
+        *   *Brouillon* : Visible seulement par l'auteur.
+        *   *En attente* : Soumis à validation.
+        *   *Publié* : Visible sur le site public.
+*   **Gestion des Taxonomies :** CRUD complet pour les Catégories et les Tags.
+*   **Gestion des Utilisateurs :** 
+    *   Liste des inscrits.
+    *   Attribution des Rôles (Super Admin, Éditeur, Lecteur).
+    *   Modération des commentaires.
 
-3.  **API REST (Le Pont)**
-    *   Interface de communication unique et **sécurisée**.
-    *   Expose les données (JSON) au mobile et au front.
-    *   *Techno : Laravel API Resource + Laravel Sanctum (Tokens).*
+### 🔌 Module 3 : API REST (Le Pont)
+*L'interface d'échange de données.*
+*   **Sécurité :** Authentification par Token (Sanctum).
+*   **Diffusion :** Expose les articles, catégories et profils au format JSON standardisé.
+*   **Performance :** Pagination des résultats et filtres optimisés.
 
-4.  **Couche Service (Core Métier)**
-    *   **Architecture N-Tiers** : Centralise toute la logique métier (validation complexe, calculs, actions).
-    *   Utilisée par les Contrôleurs Web et API pour éviter la duplication.
-    *   *Techno : Classes de Service PHP (ex: ArticleService).*
-
-5.  **Application Mobile**
-    *   Consultation native sur Android.
-    *   Synchronisation avec l'API.
-    *   *Techno : Kotlin + Jetpack Compose.*
+### 📱 Module 4 : Application Mobile (Android)
+*L'extension native pour la fidélisation.*
+*   **Expérience Native :** Interface fluide développée en Kotlin / Jetpack Compose.
+*   **Synchronisation :** Récupération des articles via l'API.
+*   **Fonctionnalités Mobiles :**
+    *   Login unifié (Même compte que le Web).
+    *   Mise en **Favoris** locale ou synchronisée.
+    *   Consultation optimisée pour petits écrans.
 
 ---
 
-## 4. Acteurs & Rôles Cibles
+## 3. Acteurs & Rôles (Permissions)
 
-*   **Visiteur :** Consulte le contenu public (Web/Mobile).
-*   **Auteur :** Crée et édite ses propres contenus.
-*   **Administrateur :** Gère toute la plateforme (Utilisateurs, Configuration).
+Le système repose sur une gestion stricte des droits (RBAC) :
+
+
+*   **Visiteur**
+    *   *Accès :* Web Public (Oui), Mobile (Lecture), Admin (Non).
+    *   *Droits :* Lecture seule.
+
+*   **Membre**
+    *   *Accès :* Web Public (Oui), Mobile (Oui), Admin (Non).
+    *   *Droits :* Peut commenter, gérer ses favoris.
+
+*   **Éditeur**
+    *   *Accès :* Web Public (Oui), Mobile (Oui), Admin (Restreint).
+    *   *Droits :* Crée/Édite **ses** articles. Ne peut pas publier directement (doit soumettre).
+
+*   **Admin**
+    *   *Accès :* Web Public (Oui), Mobile (Oui), Admin (Total).
+    *   *Droits :* Valide/Publie les articles des autres. Gère utilisateurs et config.
+
 
 ---
 
-## 5. Ancrage Compétences (C1-C7)
+## 4. Architecture Technique
 
-*   **C1 (Besoin)** : Maquettes HTML/CSS (Preline), diagrammes de cas d'usage.
-*   **C2 (BDD)** : Schéma relationnel (Articles, Catégories, Users), Migrations.
-*   **C3 (Back-end)** : Logique Laravel, Routes, Contrôleurs, API Resources.
-    *   *Introduction N-Tiers :* Utilisation d'une **Couche Service** pour isoler la logique métier (Controller → Service → Model).
-*   **C4 (Gestion)** : Git flow, Dépôt unique, Suivi par ticket.
-*   **C5 (Mobile)** : App Android consommatrice d'API.
-*   **C6 (Qualité)** : Tests unitaires, Jeux de données (Seeders).
-*   **C7 (Déploiement)** : Mise en production sur serveur Linux.
+*   **Backend :** Laravel 11.
+*   **Architecture Logique :** N-Tiers. Les Contrôleurs ne contiennent pas de logique métier complexe (déléguée aux **Services**).
+*   **Frontend Web :** Blade Components + Tailwind CSS (Preline UI).
+*   **Base de Données :** MySQL 8.0.
+*   **Mobile :** Android Natif (Kotlin, MVVM, Retrofit).
 
-> Ce fichier sert de **cahier des charges général** pour l'enseignant. Les spécifications techniques fines se trouvent dans les fichiers de prototypes respectifs.
+---
+
+## 5. Livrables Attendus (Definition of Done)
+
+Pour considérer le projet comme "Terminé", il doit inclure :
+1.  **Code Source :** Dépôt Git propre avec historique (Commits conventionnels).
+2.  **Base de Données :** Migrations et Seeders (Jeux de données de démo) fonctionnels.
+3.  **Documentation :** README d'installation complet.
+4.  **Déploiement :** Une URL accessible vers la version Web Production.
+5.  **APK :** Le fichier d'installation de l'application mobile.
