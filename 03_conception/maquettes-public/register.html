@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoliCode Blog - Inscription</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { 600: '#2563eb', 700: '#1d4ed8' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center h-full py-16">
+
+    <div
+        class="w-full max-w-md bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700">
+        <div class="p-6 sm:p-10">
+            <div class="text-center">
+                <h1 class="block text-2xl font-bold text-gray-800 dark:text-white">Créer un compte</h1>
+                <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                    Déjà inscrit ?
+                    <a class="text-blue-600 decoration-2 hover:underline font-medium" href="login.html">
+                        Se connecter
+                    </a>
+                </p>
+            </div>
+
+            <div class="mt-5">
+                <!-- Form -->
+                <form>
+                    <div class="grid gap-y-4">
+                        <!-- Nom Complet -->
+                        <div>
+                            <label for="name" class="block text-sm mb-2 dark:text-white">Nom complet</label>
+                            <div class="relative">
+                                <input type="text" id="name" name="name"
+                                    class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                                    required placeholder="John Doe">
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-sm mb-2 dark:text-white">Adresse email</label>
+                            <div class="relative">
+                                <input type="email" id="email" name="email"
+                                    class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                                    required placeholder="exemple@solicode.fr">
+                            </div>
+                        </div>
+
+                        <!-- Password -->
+                        <div>
+                            <label for="password" class="block text-sm mb-2 dark:text-white">Mot de passe</label>
+                            <div class="relative">
+                                <input type="password" id="password" name="password"
+                                    class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                                    required placeholder="Minimum 8 caractères">
+                            </div>
+                        </div>
+
+                        <!-- Confirm Password -->
+                        <div>
+                            <label for="password_confirmation" class="block text-sm mb-2 dark:text-white">Confirmer le
+                                mot de passe</label>
+                            <div class="relative">
+                                <input type="password" id="password_confirmation" name="password_confirmation"
+                                    class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                                    required placeholder="Répétez le mot de passe">
+                            </div>
+                        </div>
+
+                        <!-- Checkbox -->
+                        <div class="flex items-center">
+                            <div class="flex">
+                                <input id="accept" name="accept" type="checkbox"
+                                    class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                                    required>
+                            </div>
+                            <div class="ms-3">
+                                <label for="accept" class="text-sm dark:text-white">J'accepte les <a
+                                        class="text-blue-600 decoration-2 hover:underline font-medium"
+                                        href="#">Conditions d'utilisation</a></label>
+                            </div>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+                            S'inscrire
+                        </button>
+                    </div>
+                </form>
+                <!-- End Form -->
+            </div>
+
+            <div class="mt-4 text-center">
+                <a href="index.html" class="text-sm text-gray-500 hover:text-gray-800">← Retour à l'accueil</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

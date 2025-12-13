@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoliCode Blog - Recherche</title>
+
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: { 600: '#2563eb', 700: '#1d4ed8' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased h-full flex flex-col">
+
+    <!-- Navbar -->
+    <header
+        class="sticky top-0 flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b border-gray-200 text-sm py-3 sm:py-0">
+        <nav class="relative max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
+            aria-label="Global">
+            <div class="flex items-center justify-between">
+                <a class="flex-none text-xl font-heading font-semibold text-primary-600 focus:outline-none focus:ring-1 focus:ring-gray-200"
+                    href="index.html" aria-label="Brand">
+                    SoliCode<span class="text-gray-900">Blog</span>
+                </a>
+                <div class="sm:hidden">
+                    <button type="button"
+                        class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+                        data-hs-collapse="#navbar-collapse-with-animation"
+                        aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
+                        <svg class="hs-collapse-open:hidden w-4 h-4" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                        <svg class="hs-collapse-open:block hidden w-4 h-4" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="navbar-collapse-with-animation"
+                class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
+                <div
+                    class="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:pl-7">
+                    <a class="font-medium text-gray-500 hover:text-gray-400 sm:py-6" href="index.html">Accueil</a>
+                    <a class="font-medium text-blue-600 sm:py-6" href="search.html" aria-current="page">Laravel</a>
+                    <a class="font-medium text-gray-500 hover:text-gray-400 sm:py-6" href="search.html">PHP</a>
+                    <a class="font-medium text-gray-500 hover:text-gray-400 sm:py-6" href="search.html">Android</a>
+                    <a class="font-medium text-gray-500 hover:text-gray-400 sm:py-6" href="search.html">Kotlin</a>
+                    <div class="flex items-center gap-x-2 sm:ms-auto">
+                        <a class="flex items-center gap-x-2 font-medium text-gray-500 hover:text-blue-600 sm:border-s sm:border-gray-300 sm:my-6 sm:ps-6"
+                            href="login.html">Connexion</a>
+                        <a class="flex items-center gap-x-2 font-medium text-white bg-blue-600 hover:bg-blue-700 py-2 px-3 rounded-md transition"
+                            href="register.html">S'inscrire</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow w-full max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+        <!-- Search Header -->
+        <div class="mb-10 text-center mx-auto max-w-2xl">
+            <h1 class="text-3xl font-bold text-gray-800 mb-6">Explorer les ressources</h1>
+
+            <!-- Search Bar Component Injection -->
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-4 pointer-events-none">
+                    <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.3-4.3" />
+                    </svg>
+                </div>
+                <input type="text"
+                    class="py-4 px-4 ps-11 block w-full bg-white border border-gray-200 rounded-xl text-sm focus:border-blue-500 focus:ring-blue-500 shadow-sm"
+                    placeholder="Rechercher...">
+            </div>
+
+            <!-- Filters (Badges) -->
+            <div class="flex flex-wrap justify-center gap-2 mt-4">
+                <button type="button"
+                    class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200">
+                    Tous
+                </button>
+                <button type="button"
+                    class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-white text-gray-800 hover:bg-gray-100 shadow-sm">
+                    Laravel
+                </button>
+                <button type="button"
+                    class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-white text-gray-800 hover:bg-gray-100 shadow-sm">
+                    PHP
+                </button>
+                <button type="button"
+                    class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-white text-gray-800 hover:bg-gray-100 shadow-sm">
+                    Android
+                </button>
+                <button type="button"
+                    class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-white text-gray-800 hover:bg-gray-100 shadow-sm">
+                    Kotlin
+                </button>
+            </div>
+        </div>
+
+        <!-- Grid Results -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <a class="group border border-gray-200 flex flex-col h-full bg-white shadow-sm rounded-xl hover:shadow-md transition"
+                href="article.html">
+                <div
+                    class="h-40 flex flex-col justify-center items-center bg-blue-600 rounded-t-xl overflow-hidden relative">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Laravel">
+                    <span
+                        class="absolute top-3 right-3 py-1 px-3 rounded-full text-xs font-medium bg-white/90 text-gray-800 shadow-sm">Laravel</span>
+                </div>
+                <div class="p-4">
+                    <div class="flex items-center gap-x-2 mb-3">
+                        <span class="px-2 py-1 bg-gray-100 text-xs text-gray-600 rounded">#Laravel</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 group-hover:text-primary-600">Débuter avec Laravel 11
+                    </h3>
+                    <p class="mt-3 text-gray-500 line-clamp-3">Guide complet pour installer et configurer votre premier
+                        projet.</p>
+                </div>
+                <div
+                    class="mt-auto flex border-t border-gray-100 divide-x divide-gray-100 dark:border-gray-700 dark:divide-gray-700">
+                    <div class="p-4 flex items-center gap-x-3">
+                        <img class="w-8 h-8 rounded-full"
+                            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+                            alt="Avatar">
+                        <div>
+                            <span class="block text-sm font-semibold text-gray-800">Maria T.</span>
+                            <span class="block text-xs text-gray-500">12 Déc 2025</span>
+                        </div>
+                    </div>
+                    <div class="p-4 flex items-center gap-x-1 text-gray-500 ml-auto">
+                        <svg class="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                        </svg>
+                        <span class="text-xs font-medium">5</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 2 -->
+            <a class="group border border-gray-200 flex flex-col h-full bg-white shadow-sm rounded-xl hover:shadow-md transition"
+                href="article.html">
+                <div
+                    class="h-40 flex flex-col justify-center items-center bg-purple-600 rounded-t-xl overflow-hidden relative">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Android">
+                    <span
+                        class="absolute top-3 right-3 py-1 px-3 rounded-full text-xs font-medium bg-white/90 text-gray-800 shadow-sm">Kotlin</span>
+                </div>
+                <div class="p-4">
+                    <div class="flex items-center gap-x-2 mb-3">
+                        <span class="px-2 py-1 bg-gray-100 text-xs text-gray-600 rounded">#Kotlin</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 group-hover:text-primary-600">RecyclerView avec
+                        Kotlin</h3>
+                    <p class="mt-3 text-gray-500 line-clamp-3">Comment afficher des listes performantes sur Android.</p>
+                </div>
+                <div
+                    class="mt-auto flex border-t border-gray-100 divide-x divide-gray-100 dark:border-gray-700 dark:divide-gray-700">
+                    <div class="p-4 flex items-center gap-x-3">
+                        <img class="w-8 h-8 rounded-full"
+                            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+                            alt="Avatar">
+                        <div>
+                            <span class="block text-sm font-semibold text-gray-800">Alex R.</span>
+                            <span class="block text-xs text-gray-500">10 Déc 2025</span>
+                        </div>
+                    </div>
+                    <div class="p-4 flex items-center gap-x-1 text-gray-500 ml-auto">
+                        <svg class="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                        </svg>
+                        <span class="text-xs font-medium">8</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 3 -->
+            <a class="group border border-gray-200 flex flex-col h-full bg-white shadow-sm rounded-xl hover:shadow-md transition"
+                href="article.html">
+                <div
+                    class="h-40 flex flex-col justify-center items-center bg-teal-600 rounded-t-xl overflow-hidden relative">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Design">
+                    <span
+                        class="absolute top-3 right-3 py-1 px-3 rounded-full text-xs font-medium bg-white/90 text-gray-800 shadow-sm">Laravel</span>
+                </div>
+                <div class="p-4">
+                    <div class="flex items-center gap-x-2 mb-3">
+                        <span class="px-2 py-1 bg-gray-100 text-xs text-gray-600 rounded">#Figma</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 group-hover:text-primary-600">Prototyper rapidement
+                    </h3>
+                    <p class="mt-3 text-gray-500 line-clamp-3">Les meilleures astuces pour des maquettes efficaces.</p>
+                </div>
+                <div
+                    class="mt-auto flex border-t border-gray-100 divide-x divide-gray-100 dark:border-gray-700 dark:divide-gray-700">
+                    <div class="p-4 flex items-center gap-x-3">
+                        <img class="w-8 h-8 rounded-full"
+                            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+                            alt="Avatar">
+                        <div>
+                            <span class="block text-sm font-semibold text-gray-800">Sarah L.</span>
+                            <span class="block text-xs text-gray-500">08 Déc 2025</span>
+                        </div>
+                    </div>
+                    <div class="p-4 flex items-center gap-x-1 text-gray-500 ml-auto">
+                        <svg class="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                        </svg>
+                        <span class="text-xs font-medium">3</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 4 -->
+            <a class="group border border-gray-200 flex flex-col h-full bg-white shadow-sm rounded-xl hover:shadow-md transition"
+                href="article.html">
+                <div
+                    class="h-40 flex flex-col justify-center items-center bg-gray-800 rounded-t-xl overflow-hidden relative">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Code">
+                    <span
+                        class="absolute top-3 right-3 py-1 px-3 rounded-full text-xs font-medium bg-white/90 text-gray-800 shadow-sm">PHP</span>
+                </div>
+                <div class="p-4">
+                    <div class="flex items-center gap-x-2 mb-3">
+                        <span class="px-2 py-1 bg-gray-100 text-xs text-gray-600 rounded">#PHP</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 group-hover:text-primary-600">Les nouveautés de PHP
+                        8.3</h3>
+                    <p class="mt-3 text-gray-500 line-clamp-3">Un tour d'horizon des fonctionnalités clés pour les
+                        développeurs backend.</p>
+                </div>
+                <div
+                    class="mt-auto flex border-t border-gray-100 divide-x divide-gray-100 dark:border-gray-700 dark:divide-gray-700">
+                    <div class="p-4 flex items-center gap-x-3">
+                        <img class="w-8 h-8 rounded-full"
+                            src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+                            alt="Avatar">
+                        <div>
+                            <span class="block text-sm font-semibold text-gray-800">John D.</span>
+                            <span class="block text-xs text-gray-500">05 Déc 2025</span>
+                        </div>
+                    </div>
+                    <div class="p-4 flex items-center gap-x-1 text-gray-500 ml-auto">
+                        <svg class="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                        </svg>
+                        <span class="text-xs font-medium">10</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 5 -->
+            <a class="group border border-gray-200 flex flex-col h-full bg-white shadow-sm rounded-xl hover:shadow-md transition"
+                href="article.html">
+                <div
+                    class="h-40 flex flex-col justify-center items-center bg-indigo-600 rounded-t-xl overflow-hidden relative">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Mobile">
+                    <span
+                        class="absolute top-3 right-3 py-1 px-3 rounded-full text-xs font-medium bg-white/90 text-gray-800 shadow-sm">Android</span>
+                </div>
+                <div class="p-4">
+                    <div class="flex items-center gap-x-2 mb-3">
+                        <span class="px-2 py-1 bg-gray-100 text-xs text-gray-600 rounded">#Android</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 group-hover:text-primary-600">Architecture MVVM sur
+                        Android</h3>
+                    <p class="mt-3 text-gray-500 line-clamp-3">Structurer son code pour des applications robustes et
+                        testables.</p>
+                </div>
+                <div
+                    class="mt-auto flex border-t border-gray-100 divide-x divide-gray-100 dark:border-gray-700 dark:divide-gray-700">
+                    <div class="p-4 flex items-center gap-x-3">
+                        <img class="w-8 h-8 rounded-full"
+                            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+                            alt="Avatar">
+                        <div>
+                            <span class="block text-sm font-semibold text-gray-800">Pierre M.</span>
+                            <span class="block text-xs text-gray-500">01 Déc 2025</span>
+                        </div>
+                    </div>
+                    <div class="p-4 flex items-center gap-x-1 text-gray-500 ml-auto">
+                        <svg class="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                        </svg>
+                        <span class="text-xs font-medium">1</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 6 -->
+            <a class="group border border-gray-200 flex flex-col h-full bg-white shadow-sm rounded-xl hover:shadow-md transition"
+                href="article.html">
+                <div
+                    class="h-40 flex flex-col justify-center items-center bg-pink-600 rounded-t-xl overflow-hidden relative">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="UI Gradient">
+                    <span
+                        class="absolute top-3 right-3 py-1 px-3 rounded-full text-xs font-medium bg-white/90 text-gray-800 shadow-sm">Laravel</span>
+                </div>
+                <div class="p-4">
+                    <div class="flex items-center gap-x-2 mb-3">
+                        <span class="px-2 py-1 bg-gray-100 text-xs text-gray-600 rounded">#Tailwind</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 group-hover:text-primary-600">Tailwind CSS vs
+                        Bootstrap</h3>
+                    <p class="mt-3 text-gray-500 line-clamp-3">Comparatif détaillé pour choisir le bon framework CSS en
+                        2025.</p>
+                </div>
+                <div
+                    class="mt-auto flex border-t border-gray-100 divide-x divide-gray-100 dark:border-gray-700 dark:divide-gray-700">
+                    <div class="p-4 flex items-center gap-x-3">
+                        <img class="w-8 h-8 rounded-full"
+                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+                            alt="Avatar">
+                        <div>
+                            <span class="block text-sm font-semibold text-gray-800">Léa S.</span>
+                            <span class="block text-xs text-gray-500">28 Nov 2025</span>
+                        </div>
+                    </div>
+                    <div class="p-4 flex items-center gap-x-1 text-gray-500 ml-auto">
+                        <svg class="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                        </svg>
+                        <span class="text-xs font-medium">9</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-auto w-full">
+        <div class="max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+                <div class="col-span-1">
+                    <a class="flex-none text-xl font-semibold text-primary-600 mb-3 block" href="#"
+                        aria-label="Brand">SoliCode<span class="text-gray-900">Blog</span></a>
+                    <p class="text-gray-500 text-sm">Le blog tech de référence pour les développeurs Solicode.</p>
+                </div>
+                <div class="col-span-1">
+                    <h4 class="text-xs font-semibold text-gray-900 uppercase tracking-wider mb-3">Ressources</h4>
+                    <div class="grid space-y-2">
+                        <p><a class="text-gray-500 hover:text-gray-800 text-sm" href="#">Articles</a></p>
+                    </div>
+                </div>
+                <div class="col-span-1">
+                    <h4 class="text-xs font-semibold text-gray-900 uppercase tracking-wider mb-3">Légal</h4>
+                    <div class="grid space-y-2">
+                        <p><a class="text-gray-500 hover:text-gray-800 text-sm" href="#">Mentions légales</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 pt-5">
+                <div class="text-sm text-gray-500">© 2025 SoliCode. Tous droits réservés.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Preline UI JS -->
+    <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.js"></script>
+</body>
+
+</html>

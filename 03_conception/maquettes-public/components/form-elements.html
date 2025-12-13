@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoliCode Blog - Form Elements</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { 600: '#2563eb', 700: '#1d4ed8' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 p-10 min-h-screen">
+
+    <div class="max-w-[85rem] mx-auto space-y-8">
+
+        <!-- Section: Buttons -->
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+            <h2 class="text-lg font-bold text-gray-800 mb-4">Boutons</h2>
+            <div class="flex flex-wrap gap-4 items-center">
+                <!-- Primary -->
+                <button type="button"
+                    class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                    Bouton Primaire
+                </button>
+                <!-- Secondary -->
+                <button type="button"
+                    class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none">
+                    Bouton Secondaire
+                </button>
+                <!-- Ghost -->
+                <button type="button"
+                    class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent text-blue-600 hover:bg-blue-100 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none">
+                    Bouton Ghost
+                </button>
+                <!-- With Icon -->
+                <button type="button"
+                    class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                    <svg class="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M5 12h14" />
+                        <path d="m12 5 7 7-7 7" />
+                    </svg>
+                    Suivant
+                </button>
+            </div>
+        </div>
+
+        <!-- Section: Inputs -->
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+            <h2 class="text-lg font-bold text-gray-800 mb-4">Champs de Formulaire</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
+
+                <!-- Input Text -->
+                <div>
+                    <label for="input-label" class="block text-sm font-medium mb-2">Label Input</label>
+                    <input type="text" id="input-label"
+                        class="py-3 px-4 block w-full border-gray-200 border rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                        placeholder="Placeholder...">
+                </div>
+
+                <!-- Input Email (Error State) -->
+                <div>
+                    <label for="input-error" class="block text-sm font-medium mb-2">Email (Erreur)</label>
+                    <div class="relative">
+                        <input type="email" id="input-error"
+                            class="py-3 px-4 block w-full border-red-500 rounded-lg text-sm focus:border-red-500 focus:ring-red-500"
+                            value="mauvais@email" aria-describedby="email-error">
+                        <div class="absolute inset-y-0 end-0 flex items-center pointer-events-none pe-3">
+                            <svg class="h-5 w-5 text-red-500" width="16" height="16" fill="currentColor"
+                                viewBox="0 0 16 16" aria-hidden="true">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-sm text-red-600 mt-2" id="email-error">Veuillez entrer une adresse email valide.</p>
+                </div>
+
+                <!-- Select -->
+                <div>
+                    <label for="select-1" class="block text-sm font-medium mb-2">Catégorie</label>
+                    <select id="select-1"
+                        class="py-3 px-4 pe-9 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none border">
+                        <option selected>Sélectionner une catégorie</option>
+                        <option>Dev Web</option>
+                        <option>Mobile</option>
+                        <option>Design</option>
+                    </select>
+                </div>
+
+                <!-- Textarea -->
+                <div>
+                    <label for="textarea-1" class="block text-sm font-medium mb-2">Message</label>
+                    <textarea id="textarea-1"
+                        class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none border"
+                        rows="3" placeholder="Écrivez votre contenu ici..."></textarea>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Section: Checkbox & Radio -->
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+            <h2 class="text-lg font-bold text-gray-800 mb-4">Checkbox & Switch</h2>
+            <div class="flex flex-col gap-4">
+                <!-- Checkbox -->
+                <div class="flex">
+                    <input type="checkbox"
+                        class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                        id="hs-checkbox-group-1" checked>
+                    <label for="hs-checkbox-group-1" class="text-sm text-gray-500 ms-3">Se souvenir de moi</label>
+                </div>
+
+                <!-- Toggle Switch -->
+                <div class="flex items-center">
+                    <input type="checkbox" id="hs-basic-usage"
+                        class="relative w-[3.25rem] h-7 bg-gray-100 checked:bg-none checked:bg-blue-600 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 ring-1 ring-transparent focus:border-blue-600 focus:ring-blue-600 ring-offset-white focus:outline-none appearance-none dark:bg-slate-700 dark:checked:bg-blue-600 dark:focus:ring-offset-gray-800 before:inline-block before:w-6 before:h-6 before:bg-white checked:before:bg-blue-200 before:translate-x-0 checked:before:translate-x-full before:shadow before:rounded-full before:transform before:ring-0 before:transition before:ease-in-out before:duration-200 dark:before:bg-slate-400 dark:checked:before:bg-blue-200">
+                    <label for="hs-basic-usage" class="sr-only">switch</label>
+                    <span class="ms-3 text-sm text-gray-500">Mode sombre</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

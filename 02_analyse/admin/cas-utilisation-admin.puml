@@ -1,0 +1,43 @@
+@startuml
+left to right direction
+actor "Auteur" as Author
+actor "Administrateur" as Admin
+
+' Règle 4.1 : Héritage systématique
+Author <|-- Admin
+
+package "Back-Office (Admin Panel)" {
+  usecase "Gérer les Articles" as UC_Manage
+  usecase "Uploader une image" as UC_Upload
+  usecase "Soumettre un article (Workflow)" as UC_Submit
+  usecase "Voir le Dashboard (Stats)" as UC_Dashboard
+  
+  usecase "Valider / Publier un article" as UC_Validate
+  usecase "Gérer les Catégories" as UC_Cats
+  usecase "Gérer les Tags" as UC_Tags
+  usecase "Gérer les Utilisateurs" as UC_Users
+  usecase "Attribuer un Rôle" as UC_Roles
+  usecase "Rechercher un Article" as UC_Search
+  usecase "Filtrer (Catégorie/Statut)" as UC_Filter
+}
+
+' Règle 4.1 : Associations simples (--)
+Author -- UC_Dashboard
+Author -- UC_Manage
+
+' Règle 4.2 : Logique Include/Extend
+' Extensions de la gestion d'article
+UC_Upload .> UC_Manage : <<extend>>
+UC_Submit .> UC_Manage : <<extend>>
+UC_Validate .> UC_Manage : <<extend>>
+UC_Search .> UC_Manage : <<extend>>
+UC_Filter .> UC_Manage : <<extend>>
+
+' Admin hérite de Auteur, on ajoute seulement le spécifique
+Admin -- UC_Cats
+Admin -- UC_Tags
+Admin -- UC_Users
+
+UC_Roles .> UC_Users : <<extend>>
+
+@enduml
