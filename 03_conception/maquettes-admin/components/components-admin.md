@@ -1,4 +1,3 @@
-
 # Liste des Composants Génériques (Admin)
 
 Ce document recense les composants réutilisables pour l'interface d'administration. Ils doivent être intégrés dans `maquettes-admin/components/`.
@@ -19,10 +18,26 @@ Ce document recense les composants réutilisables pour l'interface d'administrat
 *   **`data/kpi-card.html`** : Carte indicateur (Dashboard).
     *   Titre, Valeur, Icône, Variation (Trending).
     *   Tooltip d'info.
-*   **`data/table.html`** : Tableau générique complet.
-    *   Header avec Titre et Bouton d'action.
-    *   Colonnes avec Checkbox.
-    *   Menu d'actions (Dropdown) en fin de ligne.
+
+*   **`data/table-header.html`** : Header générique de tableau.
+    *   Titre + description.
+    *   Recherche (optionnelle, maquette).
+    *   Filtre Catégorie (Dropdown Preline) avec `data-filter`.
+    *   Bouton d’action principal (ex: "Nouveau").
+
+*   **`data/table-content.html`** : Contenu du tableau (thead + tbody).
+    *   Colonnes avec Checkbox (sélection multiple).
+    *   Lignes avec attribut `data-category="..."` pour le filtrage.
+    *   Actions de ligne (icônes ou menu).
+
+*   **`data/table-footer.html`** : Footer du tableau.
+    *   Compteur de résultats (ex: `<span class="js-results-count">`).
+    *   Pagination (maquette).
+
+*   **`data/table.html`** : Assemblage du tableau générique complet.
+    *   Compose : `data/table-header.html` + `data/table-content.html` + `data/table-footer.html`.
+    *   Doit être encapsulé dans un conteneur `.js-table-card` pour activer le script.
+
 *   **`data/status-badge.html`** : Badges d'état/rôle.
     *   Variantes couleur : Succès, Info, Danger, Neutre.
     *   Forme arrondie (Pill).
@@ -58,7 +73,21 @@ Ce document recense les composants réutilisables pour l'interface d'administrat
 ---
 
 ## Directives de Design (Tailwind & Preline)
+
 *   Utiliser **Preline UI** pour les composants interactifs (Dropdowns, Modals).
 *   Couleurs : Garder la palette `blue-600` comme primaire.
 *   Typographie : `Inter` pour le corps, `Outfit` pour les titres.
 *   Dark Mode : Prévoir les classes `dark:...` dès le début.
+
+---
+
+## Convention JS (maquette)
+
+Pour que le filtrage fonctionne de façon générique :
+
+*   Le composant complet doit être enveloppé dans un conteneur **`.js-table-card`**.
+*   Le menu filtre utilise **`.js-filter-menu`** et ses liens `a[data-filter="..."]`.
+*   Le label du bouton filtre utilise **`.js-filter-label`**.
+*   Le `<tbody>` utilise **`.js-table-body`**.
+*   Chaque `<tr>` porte `data-category="laravel|php|android|..."`.
+*   Le compteur utilise **`.js-results-count`**.
