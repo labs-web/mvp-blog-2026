@@ -27,9 +27,9 @@ Tu dois transformer les besoins métier en une solution technique opérationnell
 *   `03_system_prompt.md` : Ce fichier.
 
 ### 🔶 Le Besoin (Dossier `01_besoin`)
-*   `projet_fil_rouge.md` : La vision du produit.
-*   `carte_techno_globale.md` : La stack technique imposée.
-*   `versions-prototype.md` : La liste des features à implémenter.
+*   `02_projet_fil_rouge.md` : La vision du produit.
+*   `01_carte_techno_globale.md` : La stack technique imposée.
+*   `03_versions-prototype.md` : La liste des features à implémenter.
 
 ---
 

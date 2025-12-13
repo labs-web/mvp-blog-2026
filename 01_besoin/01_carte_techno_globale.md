@@ -1,12 +1,12 @@
 ---
-title: "carte_techno_globale.md"
-version: "v2.1"
+title: "01_carte_techno_globale.md"
+version: "v3.0"
 role: "Stack technique officielle du projet fil rouge"
 ---
 
-# 🛠️ Référentiel Technique & Stack — Projet Fil Rouge
+# 🛠️ Référentiel Technique & Stack
 
-> Ce document définit **l'environnement technique strict** du projet fil rouge, structuré par niveaux de progression pour valider les compétences C1→C7 + M8.
+Ce document définit **l'environnement technique strict** du projet fil rouge MVP.
 
 ## 1. Vue générale
 
@@ -19,36 +19,34 @@ Le projet est une **application complète** comprenant :
 
 ---
 
-## 2. Stack Technique par Niveau
+## 2. Stack Technique Détaillée
 
-### 🟦 Niveau N1 — Socle (Imiter)
-*   **Objectif :** Maîtriser les bases et les relations simples.
-*   **Back-end :** Laravel basic (Routes, Controllers, Models), **Validation FormRequest**.
-*   **Sécurité :** Authentification via **Laravel UI**, Autorisation simple (Middleware, Gates).
-*   **Front-end :** Blade (Layouts/Components) + **Pure Tailwind CSS** (Apprentissage).
-*   **Architecture Admin :** CRUD classique (rechargement de page).
-*   **API :** JSON simple (Getters).
-*   **Mobile :** Android Compose (Lecture seule).
-*   **BDD :** MySQL (Tables : Articles, Users, Categories).
+### Back-end & Architecture
+*   **Framework :** Laravel 11.
+*   **Architecture :** N-Tiers (Controller -> Service -> Model).
+*   **Sécurité :**
+    *   Authentification : Laravel Fortify / Breeze.
+    *   Autorisation : **Spatie Laravel Permission** (RBAC).
+*   **API :** Resources JSON, Sanctum (Tokens).
 
-### 🟪 Niveau N2 — Robuste (Adapter)
-*   **Objectif :** Structurer une application professionnelle complète.
-*   **Back-end :** Laravel avancé (**Couche Service**, Upload fichiers, Events).
-*   **Front-end :** Blade + **Preline UI** (Composants) + **AJAX (Fetch API)**.
-*   **Architecture Admin :** **One Page CRUD** (Recherche/Filtres dynamiques sans rechargement).
-*   **API :** Standard RESTful (Resources, Verbes HTTP complets).
-*   **Sécurité :** Auth Standard + **Spatie Permissions** (Rôles simples).
-*   **Mobile :** Android Compose + Retrofit (consomation de l'API créer dans back-end).
+### Front-end (Web)
+*   **Moteur de template :** Blade (Components, Layouts).
+*   **CSS :** Tailwind CSS.
+*   **UI Kit :** Preline UI.
+*   **Interactivité :** Alpine.js / AJAX (Fetch).
+*   **Admin Dashboard :** One Page CRUD (Recherche/Filtres dynamiques).
 
-### 🟧 Niveau MVP — Transposer (Production)
-*   **Objectif :** Livrer un produit fini et déployé pour deux contextes distincts.
-*   **Stack Technique :** Identique à N2 (consolidation).
-*   **Déploiement :** Serveur Linux (LAMP/LEMP), HTTPS, Configuration Production.
-*   **Contexte :** Multi-instances (1 instance Solicode, 1 instance Association Ville).
+### Mobile (Android)
+*   **Langage :** Kotlin.
+*   **UI :** Jetpack Compose.
+*   **Réseau :** Retrofit (Consommation API REST).
+*   **Architecture :** MVVM.
 
----
+### Base de Données
+*   **SGBD :** MySQL 8.0+.
+*   **ORM :** Eloquent (Relations, Scopes, Accessors).
 
-## 3. Outils Transverses (Tous niveaux)
-*   **Versionning :** Git (GitHub) avec flow simple ( branche : main, develop).
-*   **Test API :** Postman ou Insomnia.
-*   **Serveur :** Linux (Ubuntu Server).
+### Infrastructure & Outils
+*   **Versionning :** Git (GitHub Flow).
+*   **Serveur :** Linux (Ubuntu, Nginx/Apache).
+*   **Test API :** Postman.
