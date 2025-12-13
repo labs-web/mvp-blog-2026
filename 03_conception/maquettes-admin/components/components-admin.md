@@ -27,7 +27,7 @@ Ce document recense les composants réutilisables pour l'interface d'administrat
     *   Variantes couleur : Succès, Info, Danger, Neutre.
     *   Forme arrondie (Pill).
 
-## 4. Formulaires & Saisie
+## 3. Formulaires & Saisie
 
 *   **`forms/input-group.html`** : Champ de saisie standard.
     *   Label, Input, Message d'aide/erreur.
@@ -38,7 +38,7 @@ Ce document recense les composants réutilisables pour l'interface d'administrat
     *   Zone de contenu.
 *   **`forms/select.html`** : Menu déroulant natif ou custom.
 
-## 5. Interactif & Feedback
+## 4. Interactif & Feedback
 
 *   **`feedback/modal.html`** : Fenêtre modale générique.
     *   Titre, Corps, Footer (Fermer/Action).
@@ -46,7 +46,7 @@ Ce document recense les composants réutilisables pour l'interface d'administrat
 *   **`feedback/alert.html`** : Messages de notification.
     *   Succès, Erreur, Info.
 
-## 6. Widgets Complexes
+## 5. Widgets Complexes
 
 *   **`widgets/recent-articles.html`** : Tableau simplifié "Derniers Articles" (Dashboard).
     *   Liste compacte.
