@@ -10,10 +10,11 @@ Il référence directement les **Cas d'Utilisation (UC)** validés en phase d'an
 
 ---
 
-## 🟢 Sprint 1 : Socle Technique & Lecture
-**Objectif :** Mise en place MVC et affiche lecture.
+## 🟢 Sprint 1 : Lecture & Découverte
+**Objectif :** Permettre aux visiteurs de découvrir et lire le contenu du blog.
 
 ### 🧩 Cas d'Utilisation (UC)
+> [Voir Diagramme Visiteur](mvp/uc-mvp-visiteur.puml)
 *   **UC_List** : Consulter la liste des articles (MVC basique).
 *   **UC_Read** : Lire un article (Détail).
 
@@ -25,8 +26,8 @@ Il référence directement les **Cas d'Utilisation (UC)** validés en phase d'an
 
 ---
 
-## 🟡 Sprint 2 : Back-Office (CRUD)
-**Objectif :** Création et gestion des contenus.
+## 🟡 Sprint 2 : Publication & Gestion des Contenus
+**Objectif :** Offrir aux administrateurs un outil pour publier et gérer les articles.
 
 ### 🧩 Cas d'Utilisation (UC)
 *   **UC_CRUD_Article** : Créer, Modifier, Supprimer un article (Backend).
@@ -39,10 +40,11 @@ Il référence directement les **Cas d'Utilisation (UC)** validés en phase d'an
 
 ---
 
-## 🟠 Sprint 3 : Sécurité & Rôles
-**Objectif :** Gestion des accès.
+## 🟠 Sprint 3 : Authentification & Permissions
+**Objectif :** Sécuriser l'accès et distinguer les droits entre Auteurs et Administrateurs.
 
 ### 🧩 Cas d'Utilisation (UC)
+> [Voir Diagramme Membre](mvp/uc-mvp-membre.puml)
 *   **UC_Login** : Se connecter (Admin/Auteur).
 *   **UC_Register** : S'inscrire.
 *   **UC_Moderate** : Modération (Admin peut tout voir, Auteur voit ses articles).
@@ -54,10 +56,11 @@ Il référence directement les **Cas d'Utilisation (UC)** validés en phase d'an
 
 ---
 
-## 🔵 Sprint 4 : Interactions (Commentaires)
-**Objectif :** Social et modération.
+## 🔵 Sprint 4 : Commentaires & Communauté
+**Objectif :** Fédérer une communauté en permettant les échanges et la modération.
 
 ### 🧩 Cas d'Utilisation (UC)
+> [Voir Diagramme Membre](mvp/uc-mvp-membre.puml)
 *   **UC_PostComment** : Poster un commentaire.
 *   **UC_ReadComments** : Lire les commentaires d'un article.
 *   **UC_ModerateComment** : Valider/Supprimer un commentaire (Admin).

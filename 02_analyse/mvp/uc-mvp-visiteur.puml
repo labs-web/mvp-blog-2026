@@ -2,7 +2,7 @@
 left to right direction
 actor "Visiteur" as Guest
 
-package "Espace Lecture (Public)" {
+package "Espace Visiteur (Public)" {
   usecase "Consulter la liste des articles" as UC_List
   usecase "Lire un article (Détail)" as UC_Read
   usecase "Rechercher des articles" as UC_Search
