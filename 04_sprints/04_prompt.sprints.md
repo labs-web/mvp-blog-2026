@@ -1,5 +1,5 @@
 ---
-title: "04_prompt.md"
+title: "04_prompt.sprints.md"
 role: "Guide de Conception des Mini-Projets Pédagogiques (N1/N2/N3)"
 ---
 
@@ -33,14 +33,17 @@ Chaque session technique doit suivre strictement cette progression en 3 temps :
 *   **Objectif :** Réaliser en direct une fonctionnalité clé du futur Mini-Projet N3 (brique manquante du N2).
 *   **Format :** Un défi (45 min) consistant à développer une fonctionnalité réelle du Mini-Projet (ex: "Page Détail").
 
-### 3️⃣ Niveau 3 (Transposer) : "L'Architecture Complète"
-*   **Objectif :** Réaliser un projet complet qui prépare directement le Sprint de la Phase.
-*   **Alignement :** Le Mini-Projet N3 est une **version individuelle** du Sprint que le groupe devra livrer en fin de phase.
-    *   *Exemple :* Si le Sprint de Phase est "Blog Visiteur", le N3 est "Site Vitrine Ville".
+### 3️⃣ Niveau 3 (Transposer) : "L'Architecture Complète (Version Individuelle)"
+*   **Objectif :** Développer individuellement la fonctionnalité du Sprint en respectant l'architecture cible.
+*   **Alignement (La Double Réalisation) :** 
+    *   Le projet Fil Rouge se construit dans deux contextes distincts.
+    *   **Contexte Formation (Individuel) :** L'apprenant développe ici version du projet Fil Rouge ("Association d'une ville") en suivant les exigences du N3.
+    *   **Contexte Établissement (Groupe) :** En fin de phase (Sprint), les apprenants regrouperont leurs compétences pour refaire/finaliser la version officielle installée au centre.
+    *   *Note :* L'apprenant développe donc l'application **deux fois** (Entraînement Individuel -> Production Groupe).
 *   **Contraintes Techniques :**
     *   ✅ **Architecture Stricte Obligatoire :** Utilisation de la **Couche Service**.
-    *   🏆 **Livrable :** Un mini-projet fonctionnel couvrant les mêmes UCs que le Sprint cible.
-*   **Exemple S3 :** Portfolio complet (Home, Services, Contact) utilisant `PortfolioService` pour nourrir les vues.
+    *   🏆 **Livrable :** Le module fonctionnel du Sprint (ex: Gestion des Articles), fonctionnel et complet.
+*   **Exemple S3 :** Développement complet du module "Publication Article" avec `ArticleService` (Version Perso).
 
 ---
 

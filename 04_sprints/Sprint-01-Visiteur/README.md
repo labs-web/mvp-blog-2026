@@ -8,13 +8,6 @@ Pour réussir ce Sprint, vous devez avoir validé les sessions de formation suiv
 *   ✅ **Session S3 :** Lancement Laravel & Interface Publique (Routing, Controller, Blade).
 *   ✅ **Session S4 :** Base de Données & Modèles (Migration, Eloquent).
 
-Dans ces deux session de formation les apprenant doivent avoir les notions de base de MVC et aravelr : réalisation de Portfolio
-
-Dans S4, il doiven réaliser la base de données de MVP avec les deux de teste 
-
-Travailler les labs et veille si possible 
-
-
 ### 🔬 Labs & Veille
 *   🧪 **Lab Vite :** Savoir configurer et compiler Tailwind CSS pour le frontend.
 *   🧪 **Lab AJAX :** Comprendre les requêtes asynchrones (pour la recherche instantanée).

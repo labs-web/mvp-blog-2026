@@ -14,7 +14,7 @@ Pour commencer, merci de **charger et analyser** immédiatement le fichier de co
     *   `01_besoin/01_stack.md` (Stack Technique)
 
 3.  **La Conception & Suivi (Si disponible)** :
-    *   `03_conception/03_sprint_backlog.md` (Sprint Backlog & Roadmap)
+    *   `04_sprints/03_sprint_backlog.md` (Sprint Backlog & Roadmap)
 
 **Instruction :**
 Une fois ces fichiers analysés, confirme-moi que tu es prêt et propose-moi la première étape logique selon la roadmap.

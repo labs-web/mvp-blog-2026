@@ -5,135 +5,187 @@ role: "Planning des Sessions de Formation (Phases et Sprints)"
 
 # 🎓 Planning Pédagogique : Fil Rouge & Mini-Projets
 
-Ce document structure la formation en **Phases**. Une phase peut contenir **une ou plusieurs sessions** et suit une progression rigoureuse : **Imiter (N1)** > **Adapter (N2)** > **Live coding** > **Transposer (N3 Individuel)** > **Consolider (Rattrapage Groupe)**.
+Ce document structure la formation selon la stratégie de **Double Réalisation** :
+1.  **Parcours Individuel (Formation)** : L'apprenant développe son propre projet ("Site de Ville / Association") via les niveaux N1/N2/N3.
+2.  **Parcours Groupe (Production)** : En fin de phase, l'équipe consolide les acquis pour livrer le Sprint du "Projet Solicode".
 
 ---
 
 ## 🗓️ Phase 1 : Fondamentaux (S1-S2)
 
-### Session S1 : Rappels PHP & Algorithmique
-*   **Objectif :** Sécuriser les bases.
+### Session S1 : Rappels PHP & Algorithmique (Imiter)
+*   **Objectif :** Sécuriser les bases du langage sans framework.
 *   **Contenu :** Variables, boucles, fonctions, manipulation de tableaux.
 
 ### Session S2 : Initiation Mobile (Android/Kotlin)
 *   **Objectif :** Découverte de l'environnement Android Studio.
-*   **Contenu :** les base de kotlin, "Hello World", Layouts simples., 
-
-<!-- TOIDO : la fin de pahse : Présentation de planning anuelle : Projet file rouge,
-
-Projet individuel : Blog sur une ville 
-Projet en groupe : Blog de Solicode
-
-Les session de formation,  session de rattrapage et réalisation de sprint de projet en groupe
- 
- -->
+*   **Contenu :** Bases de Kotlin, "Hello World", Layouts simples.
 
 
+<!-- TODO: ajouter une le description de travail à faire à la fin de la pahse, Présentation de programme de formation, les phase, session, travail individuel et travail en groupe -->
 ---
 
-## 🗓️ Phase 2 : Découverte Framework
 
-### Session S3 : Lancement Laravel
+## 🗓️ Phase 2 : Sprint 1 : Visiteur
+
+
+<!-- TODO : dans chaque phase , donner la description des session de chaque phase -->
+### Session S3 Architecture MVC, Routing, Controller, Blade.
+
+Dans cette session S3, on va pas suivre le Sprint1, on va trvailler su un site de type portifolio de projet.
+car, nous vousslon commencer par la partie public et nous avvons pas encors les notions de base de données.
+
 **Thème :** Architecture MVC, Routing, Controller, Blade.
 
-*   **N1 (Imiter) : Page Accueil Basique**
+*   **1️⃣ N1 (Imiter) : Page Accueil "Brute"**
     *   *Tâche :* Créer une Route `/` + Contrôleur + Vue avec CSS natif (sans Service, sans Preline).
-*   **N2 (Adapter) : Page Accueil "Pro"**
-    *   *Tâche :* Intégrer **Preline UI** et passer au layout Blade.
-    *   Intégration de couche Service
-*   **🔴 Live Coding (Validation N2 > Vers N3)**
-    *   *Challenge :* **Création de la page Détail Projet**.
-    *   *Objectif :* Réaliser en direct une fonctionnalité clé du futur Mini-Projet N3 (brique manquante du N2).
-*   **N3 (Transposer) : Mini-Projet Individuel "Portfolio Complet"**
-    *   *Objectif :* Site complet (Home, Services, Projets, Contact) avec **Preline UI**.
-    *   *Architecture :* Utilisation obligatoire de la couche **Service** (`PortfolioService`) pour fournir les données.
-*   **🛑 Fin de Phase : Lancement Projet Fil Rouge (Solicode)**
-    *   **Organisation :** Formation des équipes (Groupe 1, Groupe 2, Groupe 3).
-    *   **Activité :** Présentation du "Blog Solicode", du Backlog Sprints, et initialisation du Git Flow par groupe.
-    *   *Pas de développement de fonctionnalité Sprint ici, juste le setup Collaboratif.*
+    *   *Objectif :* Comprendre le cycle de vie `Request -> Route -> Controller -> View -> Response`.
+
+*   **2️⃣ N2 (Adapter) : Page Accueil "Pro" (Prototype)**
+    *   *Tâche :* Intégrer **Preline UI** et structurer avec Layout Blade (`app.blade.php`).
+    *   *Architecture :* Introduction de la couche Service pour préparer les données.
+
+*   **🧪 Live Coding (Validation N2 > Vers N3)**
+    *   *Challenge :* **Création de la page "Détail Projet"**.
+    *   *Objectif :* Coder en direct une route paramétrée (`/projets/{id}`) et sa vue (Brique manquante du N2).
+
+*   **3️⃣ N3 (Transposer) : Création d'un portifolio**
 
 ---
 
-## 🗓️ Phase 3 : Données & Modélisation (Session S4)
+### Session S4 : Base de Données, Migrations, Eloquent ORM.
+
+Dans cette session, nous allons apprendre comment créer une base de données avec les deux de teste et de l'appliquer à notre projet file rouge
+
 
 **Thème :** Base de Données, Migrations, Eloquent ORM.
 
-*   **N1 (Imiter) : Inventaire Simple**
-    *   Créer une table `games` et la peupler via Factory.
-*   **N2 (Adapter) + 🔴 Live Coding : Relations**
-    *   *Tâche :* Créer une migration relationnelle (ex: `category_id`) et afficher les données liées.
-    *   *Validation :* Comprendre `hasMany` / `belongsTo`.
-*   **N3 (Transposer) : Mini-Projet Individuel "Blog [Ma Ville]" - Data**
-    *   Créer la DB : `articles` (lieux/événements), `categories`.
-    *   Connecter la Home Page pour afficher les articles réels de la BDD.
-*   **🛑 Fin de Phase : SPRINT 1 (Visiteur)**
-    *   **Rattrapage (Groupe) :** Finaliser le **Sprint 1** sur le **Projet Solicode** (Merge des features Visiteur, Recette).
-    *   **Livrable :** Déploiement `sprint-1` sur serveur de test.
+*   **1️⃣ N1 (Imiter) : Inventaire Simple**
+    *   Créer les Table Articles, Categories, Users qui couvre les trois type des relation avec Laravel
+    *   Seeder
+    *   Jeux de Teste.
+
+<!-- TODO : il faut donner une description de N2 , puis le live coding deux étapes l'un aprés l'autre -->
+<!-- TODO : ajouter cette information dans : 04_prompt.sprints.md  -->
+*   **2️⃣ N2 (Adapter) + 🧪 Live Coding : Relations**
+    *   Création des de test en utilisant les fichiers CSV
+  
+* Live coiding : Table Comment
+
+*   **3️⃣ N3 (Transposer) : Projet Individuel  - Création de la base de données
+    *   Création de tous les tables
+    *   Avec les jeux de test
+
+
+### Sprint 1
+
+<!-- TODO : lire la description de sprint 1 de fichier : Sprint-01-Visiteur/README.md -->
+*   **🛑 Fin de Phase : Créatpon de Sprint 1
+    *   **Groupe (Solicode) :** Réalisation du **Sprint 1** (Page Accueil, Liste Articles, Détail).
+    *   **Livrable :** Déploiement `sprint-1` (Version Visiteur fonctionnelle).
 
 ---
 
-## 🗓️ Phase 4 : Back-Office & Gestion (Session S5)
+
+
+## 🗓️ Phase 2 : Sprint 2 : Back-Office & Gestion des articles sans sécurité
+
+
+### Session S5 : CRUD, Formulaires, Validation.
 
 **Thème :** CRUD, Formulaires, Validation.
 
-*   **N1 (Imiter) : CRUD Basique**
-    *   Controller Resource pour gérer une entité simple.
-*   **N2 (Adapter) + 🔴 Live Coding : Upload & Validation**
-    *   *Tâche :* Ajouter l'upload d'image et les règles de validation (Required, Min, etc.).
+*   **1️⃣ N1 (Imiter) : Gestion des articles :  CRUD Basique**
+    *   Controller Resource standard pour gérer une entité simple.
+
+*   **2️⃣ N2 (Adapter) + 🧪 Live Coding : Upload & Validation**
+    *   *Tâche :* Ajouter l'upload d'image et les règles de validation (Required, Min).
     *   *Validation :* Sécuriser un formulaire d'ajout.
-*   **N3 (Transposer) : Mini-Projet Individuel "Blog [Ma Ville]" - Admin**
-    *   Créer l'interface d'administration pour ajouter/modifier les lieux et événements de la ville.
+*  Live coding : filtrer par catégories
+
+*   **3️⃣ N3 (Transposer) : Projet Individuel "Site Ville" - Admin**
+    *   *Feature :* CRUD des articles avec lang, upload image, 
+        *   Recherche, avec Ajax, 
+  
+  ### Sprint 2 : Gestion des articles  sans sécurité
+
 *   **🛑 Fin de Phase : SPRINT 2 (Publication)**
-    *   **Rattrapage (Groupe) :** Finaliser le **Sprint 2** sur le **Projet Solicode**.
+    *   **Groupe (Solicode) :** Réalisation du **Sprint 2** (Gestion des Articles & Médias).
     *   **Livrable :** Déploiement `sprint-2`.
 
 ---
 
-## 🗓️ Phase 5 : Sécurité & Utilisateurs (Session S6)
+## 🗓️ Phase 3 : Sprint 3 : 
+
+### Session S6 : Authentification, Rôles, Permissions.
 
 **Thème :** Authentification, Rôles, Permissions.
 
-*   **N1 (Imiter) : Login Simple**
-    *   Utiliser Laravel Breeze/UI pour l'auth de base.
-*   **N2 (Adapter) + 🔴 Live Coding : Middleware**
-    *   *Tâche :* Protéger une route "/secret" accessible uniquement aux admins.
-    *   *Validation :* Comprendre le cycle de vie d'une requête authentifiée.
-*   **N3 (Transposer) : Mini-Projet Individuel "Blog [Ma Ville]" - Communauté**
-    *   Permettre l'inscription des résidents.
-    *   Ajouter les commentaires (Sprint 4 intégré ici).
-*   **🛑 Fin de Phase : SPRINT 3 (Auth) & 4 (Commentaires)**
-    *   **Rattrapage (Groupe) :** Intégrer Auth et Commentaires sur **Projet Solicode**.
-    *   **Livrable :** Déploiement `sprint-4`.
+*   **1️⃣ N1 (Imiter) : Login Simple**
+    *   Utiliser Laravel UI/Breeze pour l'auth de base.
+    *   Gestion des autorisation par Gate et Policy.
 
+*   **2️⃣ N2 (Adapter) 
+    *   Utilisation de spacité
+
+
+*   ** 🧪 Live Coding : Middleware**
+
+    * à déterminer 
+
+
+*   **3️⃣ N3 (Transposer) : Projet Individuel "Site Ville"
+    *   Crud Articles avec sécrutié, spacité, Role : Admin, Auteur
+
+### Sprint 3 : Authentification, Rôles, Permissions.
+
+à lire depuis : Sprint-03-Auth
 ---
 
-## 🗓️ Phase 6 : Ouverture API (Session S7)
+## 🗓️ Phase 4 : Sprint 4 : Partie public - membre
+
+
+
+
+## Phase 5 : Sprint 5 : API REST
+
+
+### Session S7 : API REST, JSON Resources.
 
 **Thème :** API REST, JSON Resources.
 
-*   **N1 (Imiter) : API GET**
-    *   Exposer une liste d'objets en JSON.
-*   **N2 (Adapter) + 🔴 Live Coding : API Robuste**
-    *   *Tâche :* Ajouter pagination, filtres et codes HTTP corrects (200, 201, 404).
-    *   *Validation :* Tester l'API avec Postman/ThunderClient.
-*   **N3 (Transposer) : Mini-Projet Individuel "Blog [Ma Ville]" - Open Data**
-    *   Créer une API publique exposant les données touristiques de la ville.
+*   **1️⃣ N1 (Imiter) : API GET**
+    *   Exposer une liste d'objets en JSON simple.
+
+*   **2️⃣ N2 (Adapter) + 🧪 Live Coding : API Robuste**
+    *   *Tâche :* Standards API (Codes HTTP 200/404, Pagination, Resource Class).
+    *   *Validation :* Tester l'API avec Postman.
+
+*   **3️⃣ N3 (Transposer) : Projet Individuel "Site Ville" - Open Data**
+    *   *Feature :* Créer une API publique exposant les données touristiques pour les partenaires.
+    *   *Livrable :* Endpoints API sécurisés (Sanctum).
+
 *   **🛑 Fin de Phase : SPRINT 5 (API)**
-    *   **Rattrapage (Groupe) :** Développer l'API du **Projet Solicode**.
+    *   **Groupe (Solicode) :** Réalisation du **Sprint 5** (API Articles & Users).
+    *   **Livrable :** Documentation API Swagger/Postman.
 
 ---
 
-## 🗓️ Phase 7 : Écosystème Mobile (Session S8)
+## 🗓️ Phase 6 : Sprint 6 : 
 
-**Thème :** Consommation API, Android Natif.
+Session S8 : Écosystème Mobile (Session S8)
 
-*   **N1 (Imiter) : Client HTTP**
+
+**Thème :** Consommation API, Android Natif (Kotlin).
+
+*   **1️⃣ N1 (Imiter) : Client HTTP**
     *   Utiliser Retrofit pour récupérer un JSON brut.
-*   **N2 (Adapter) + 🔴 Live Coding : UI List**
-    *   *Tâche :* Afficher les données JSON dans une RecyclerView/LazyColumn propre.
+
+*   **2️⃣ N2 (Adapter) + 🧪 Live Coding : UI List**
+    *   *Tâche :* Afficher les données JSON dans une `LazyColumn` (Jetpack Compose).
     *   *Validation :* Gérer le chargement et les erreurs réseau.
-*   **N3 (Transposer) : Mini-Projet Individuel "App [Ma Ville]"**
-    *   Créer l'application mobile compagnon du blog de ville.
-*   **🛑 Fin de Phase : SPRINT 6 (Mobile) & CLÔTURE**
-    *   **Rattrapage (Groupe) :** Finaliser l'app mobile **Projet Solicode**.
-    *   **Livrable Final :** Démo complète (Web + Mobile) déployée.
+
+*   **3️⃣ N3 (Transposer) : Projet Individuel "App Ville"**
+    *   *Feature :* Application mobile compagnon affichant les actualités de la ville.
+    *   *Livrable :* APK Android fonctionnel connecté à l'API personnelle.
+
