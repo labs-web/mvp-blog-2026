@@ -27,7 +27,8 @@ Chaque session technique doit suivre strictement cette progression en 3 temps :
     *   ✅ **Introduction des Librairies :** Installation de **Preline UI** / Tailwind.
     *   ✅ **Introduction de l'Architecture :** Début de structuration (Layouts Blade, Composants).
     *   🚀 **Rôle :** C'est le **Prototype** technique qui valide la faisabilité avant le grand projet.
-*   **Exemple S3 :** Refonte de la Page Accueil avec Preline UI, découpage en Layout `app.blade.php`.
+*   **Exemple S3 (Portfolio) :** Refonte de la Page Accueil avec Preline UI, découpage en Layout `app.blade.php`.
+*   **Exemple S4 (Data) :** Peuplement de la base de données via un **fichier CSV** pour simuler des données réelles (N2 Obligatoire).
 
 ### 🧪 Live Coding (Validation N2 > Vers N3)
 *   **Objectif :** Réaliser en direct une fonctionnalité clé du futur Mini-Projet N3 (brique manquante du N2).
@@ -37,13 +38,14 @@ Chaque session technique doit suivre strictement cette progression en 3 temps :
 *   **Objectif :** Développer individuellement la fonctionnalité du Sprint en respectant l'architecture cible.
 *   **Alignement (La Double Réalisation) :** 
     *   Le projet Fil Rouge se construit dans deux contextes distincts.
-    *   **Contexte Formation (Individuel) :** L'apprenant développe ici version du projet Fil Rouge ("Association d'une ville") en suivant les exigences du N3.
-    *   **Contexte Établissement (Groupe) :** En fin de phase (Sprint), les apprenants regrouperont leurs compétences pour refaire/finaliser la version officielle installée au centre.
+    *   **Contexte Formation (Individuel) :** L'apprenant développe ici **SA** version du projet Fil Rouge ("Site de Ville" ou "Portfolio") en suivant les exigences du N3.
+    *   **Contexte Établissement (Groupe) :** En fin de phase (Sprint), les apprenants regrouperont leurs compétences pour refaire/finaliser la version officielle installée au centre ("Blog Solicode").
     *   *Note :* L'apprenant développe donc l'application **deux fois** (Entraînement Individuel -> Production Groupe).
 *   **Contraintes Techniques :**
     *   ✅ **Architecture Stricte Obligatoire :** Utilisation de la **Couche Service**.
     *   🏆 **Livrable :** Le module fonctionnel du Sprint (ex: Gestion des Articles), fonctionnel et complet.
-*   **Exemple S3 :** Développement complet du module "Publication Article" avec `ArticleService` (Version Perso).
+*   **Exemple S3 :** Développement complet du site "Portfolio" (Services, Projets, Contact).
+*   **Exemple S4 :** Création de la BDD "Site Ville" avec jeux de test complets (Seeders + CSV).
 
 ---
 

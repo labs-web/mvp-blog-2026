@@ -14,7 +14,7 @@ Il référence directement les **Cas d'Utilisation (UC)** validés en phase d'an
 **Objectif :** Permettre aux visiteurs de découvrir et lire le contenu du blog.
 
 ### 🧩 Cas d'Utilisation (UC)
-> [Voir Diagramme Visiteur](../04_sprints/Sprint-01-Visiteur/sprint-01-visiteur.puml)
+> [Voir Diagramme Visiteur](./Sprint-01-Visiteur/sprint-01-visiteur.puml)
 *   **UC_List** : Consulter la liste des articles (MVC basique).
 *   **UC_Read** : Lire un article (Détail).
 *   **UC_Search** : Rechercher des articles.
@@ -28,12 +28,12 @@ Il référence directement les **Cas d'Utilisation (UC)** validés en phase d'an
 
 ---
 
-## 🟡 Sprint 2 : Publication & Gestion des Contenus
-**Objectif :** Offrir aux administrateurs un outil pour publier et gérer les articles.
+## 🟡 Sprint 2 : Publication (Back-Office sans Auth)
+**Objectif :** Offrir une interface de gestion des contenus (CRUD) pour aborder les formulaires sans la complexité de sécurité.
 
 ### 🧩 Cas d'Utilisation (UC)
-> [Voir Diagramme Publication](../04_sprints/Sprint-02-Publication/sprint-02-publication.puml)
-*   **UC_CRUD_Article** : Créer, Modifier, Supprimer un article (Backend).
+> [Voir Diagramme Publication](./Sprint-02-Publication/sprint-02-publication.puml)
+*   **UC_CRUD_Article** : Créer, Modifier, Supprimer un article.
 *   **UC_Manage_Media** : Uploader une image de couverture.
 
 ### ⚙️ Tâches Techniques
@@ -43,11 +43,11 @@ Il référence directement les **Cas d'Utilisation (UC)** validés en phase d'an
 
 ---
 
-## 🟠 Sprint 3 : Authentification & Permissions
+## 🟠 Sprint 3 : Authentification & Rôles
 **Objectif :** Sécuriser l'accès et distinguer les droits entre Auteurs et Administrateurs.
 
 ### 🧩 Cas d'Utilisation (UC)
-> [Voir Diagramme Auth](../04_sprints/Sprint-03-Auth/sprint-03-auth.puml)
+> [Voir Diagramme Auth](./Sprint-03-Auth/sprint-03-auth.puml)
 *   **UC_Login** : Se connecter (Admin/Auteur).
 *   **UC_Register** : S'inscrire.
 *   **UC_Moderate** : Modération (Admin peut tout voir, Auteur voit ses articles).
