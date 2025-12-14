@@ -3,8 +3,8 @@ title: "projet_fil_rouge.md"
 version: "v3.0"
 role: "Cahier des Charges Complet & Détaillé — Projet Fil Rouge"
 related_to:
-  - carte_techno_globale.md
-  - versions-prototype.md
+  - 01_stack.md
+  - ../03_conception/03_sprint_backlog.md
 ---
 
 # 📌 Projet Fil Rouge : "Solicode News"
@@ -23,7 +23,7 @@ Les organisations (Associations, Établissements de formation comme Solicode) on
 ### 1.2 Le Contexte Pédagogique
 Ce projet n'est pas un simple exercice. Il est conçu pour simuler une **mission réelle en entreprise**.
 *   **Contraintes Réelles :** Respect d'un cahier des charges, délais, qualité du code, sécurité.
-*   **Technologies Imposées :** Stack moderne (Laravel 11, Tailwind, Kotlin/Compose).
+*   **Technologies Imposées :** Stack moderne (Laravel 12, Tailwind, Kotlin/Compose).
 *   **Double Cible :** 
     1.  **Version Groupe :** Déploiement interne pour l'école.
     2.  **Version Individuelle :** Adaptation pour un "client" réel (Association locale) pour valider le titre.
@@ -56,7 +56,7 @@ La plateforme se divise en 4 modules interconnectés.
         *   *Brouillon* : Visible seulement par l'auteur.
         *   *En attente* : Soumis à validation.
         *   *Publié* : Visible sur le site public.
-*   **Gestion des Taxonomies :** CRUD complet pour les Catégories et les Tags.
+*   **Gestion des Catégories & Tags :** CRUD complet pour organiser les articles.
 *   **Gestion des Utilisateurs :** 
     *   Liste des inscrits.
     *   Attribution des Rôles (Super Admin, Éditeur, Lecteur).
@@ -105,7 +105,7 @@ Le système repose sur une gestion stricte des droits (RBAC) :
 
 ## 4. Architecture Technique
 
-*   **Backend :** Laravel 11.
+*   **Backend :** Laravel 12.
 *   **Architecture Logique :** N-Tiers. Les Contrôleurs ne contiennent pas de logique métier complexe (déléguée aux **Services**).
 *   **Frontend Web :** Blade Components + Tailwind CSS (Preline UI).
 *   **Base de Données :** MySQL 8.0.

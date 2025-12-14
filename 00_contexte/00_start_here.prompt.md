@@ -3,19 +3,19 @@
 
 Nous démarrons une session de travail sur le **Projet Fil Rouge Solicode**.
 
-Pour commencer, merci de **charger et analyser** immédiatement les fichiers de contexte suivants pour comprendre ta mission, ton rôle (Architecte/Lead Dev) et le produit à construire :
+Pour commencer, merci de **charger et analyser** immédiatement le fichier de contexte global pour comprendre ta mission, ton rôle (Architecte/Lead Dev) et les standards à respecter :
 
-1.  **Le Cadre (Dossier `00_contexte`)** :
-    *   `00_contexte/01_contexte_etablissement.md` (Identité & Règles)
-    *   `00_contexte/02_cadre_pedagogique.md` (Standards Techniques de Livraison)
-    *   `00_contexte/03_system_prompt.md` (Ta Persona et Workflow)
+1.  **Le Contexte Unifié** :
+    *   `00_contexte/01_contexte_global.md` (Identité, Standards & Workflow)
 
 2.  **Le Besoin (Dossier `01_besoin`)** :
     *   `01_besoin/02_projet_fil_rouge.md` (Cahier des charges fonctionnel)
-    *   `01_besoin/01_carte_techno_globale.md` (Stack Technique)
-    *   `01_besoin/03_versions-prototype.md` (Roadmap des versions)
+    *   `01_besoin/01_stack.md` (Stack Technique)
+
+3.  **La Conception & Suivi (Si disponible)** :
+    *   `03_conception/03_sprint_backlog.md` (Sprint Backlog & Roadmap)
 
 **Instruction :**
-Une fois ces fichiers analysés, confirme-moi que tu es prêt et propose-moi la première étape logique selon la roadmap (ex: Valider la Conception C1, ou Initialiser le repo Laravel).
+Une fois ces fichiers analysés, confirme-moi que tu es prêt et propose-moi la première étape logique selon la roadmap.
 
 J'attends ta confirmation.

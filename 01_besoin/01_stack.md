@@ -1,5 +1,5 @@
 ---
-title: "01_carte_techno_globale.md"
+title: "01_stack.md"
 version: "v3.0"
 role: "Stack technique officielle du projet fil rouge"
 ---
@@ -22,12 +22,13 @@ Le projet est une **application complète** comprenant :
 ## 2. Stack Technique Détaillée
 
 ### Back-end & Architecture
-*   **Framework :** Laravel 11.
+*   **Framework :** Laravel 12.
 *   **Architecture :** N-Tiers (Controller -> Service -> Model).
 *   **Sécurité :**
-    *   Authentification : Laravel Fortify / Breeze.
-    *   Autorisation : **Spatie Laravel Permission** (RBAC).
+    *   Authentification : Laravel UI avec Tailwind CSS.
+    *   Autorisation : **Spatie Laravel Permission**.
 *   **API :** Resources JSON, Sanctum (Tokens).
+*   **Internationalisation :** Laravel Lang.
 
 ### Front-end (Web)
 *   **Moteur de template :** Blade (Components, Layouts).
@@ -47,6 +48,6 @@ Le projet est une **application complète** comprenant :
 *   **ORM :** Eloquent (Relations, Scopes, Accessors).
 
 ### Infrastructure & Outils
-*   **Versionning :** Git (GitHub Flow).
+*   **Versionning :** Git (GitHub Flow) : Develop, main, une branche pour chaque Sprint, et Version.
 *   **Serveur :** Linux (Ubuntu, Nginx/Apache).
 *   **Test API :** Postman.
