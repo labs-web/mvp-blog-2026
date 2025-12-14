@@ -1,0 +1,14 @@
+flowchart TD
+    Start([Démarrage Projet]) --> Tutos[Validation Tutoriels]
+    Tutos --> Proto[Prototype Synthèse]
+    Proto --> Test{Test Technique}
+    
+    Test -- Succès --> Choix{Choix Groupe}
+    Test -- Difficultés --> G3_Route((Groupe 3))
+    
+    Choix -- Autonomie --> G1[Groupe 1 : Full]
+    Choix -- Technique --> G2[Groupe 2 : Dev]
+    
+    G1 --> Fin([Validation Titre])
+    G2 --> Fin
+    G3_Route --> G3_Step[Parcours Renforcement] --> Fin

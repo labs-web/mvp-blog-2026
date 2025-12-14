@@ -6,8 +6,6 @@ role: "Documentation des Diagrammes de Cas d'Utilisation"
 
 
 
-
-
 # 🕵️ Analyse Fonctionnelle — Cas d'Utilisation
 
 Ce dossier contient la modélisation des interactions entre les utilisateurs et le système. Pour une meilleure compréhension par l'IA et les développeurs, nous distinguons **deux niveaux de granularité**.

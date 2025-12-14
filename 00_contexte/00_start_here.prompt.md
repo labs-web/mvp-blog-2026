@@ -7,6 +7,7 @@ Pour commencer, merci de **charger et analyser** immédiatement le fichier de co
 
 1.  **Le Contexte Unifié** :
     *   `00_contexte/01_contexte_global.md` (Identité, Standards & Workflow)
+    *   `00_contexte/02_parcours_pedagogique.md` (Stratégie & Groupes)
 
 2.  **Le Besoin (Dossier `01_besoin`)** :
     *   `01_besoin/02_projet_fil_rouge.md` (Cahier des charges fonctionnel)
