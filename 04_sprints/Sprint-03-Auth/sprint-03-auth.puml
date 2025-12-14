@@ -1,21 +1,29 @@
 @startuml
 left to right direction
-actor "Visiteur" as Guest
 actor "Auteur" as Author
 actor "Administrateur" as Admin
-
-Guest <|-- Author
-Author <|-- Admin
-
 package "Sprint 3 : Auth & Permissions" {
-  usecase "S'inscrire" as UC_Register
-  usecase "Se connecter" as UC_Login
-  usecase "Modérer les contenus (Vue Admin)" as UC_Moderate
+  usecase "Se connecter / S'inscrire" as UC_Auth
+  
+  usecase "Gérer les Articles" as UC_Manage
+  
+  ' Workflow Article (Extensions)
+  usecase "Créer Article (Brouillon)" as UC_Create
+  usecase "Soumettre à validation" as UC_Submit
+  usecase "Valider & Publier" as UC_Publish
+  usecase "Rejeter un Article" as UC_Reject
 }
 
-Guest -- UC_Register
-Guest -- UC_Login
+' Relations
+UC_Create .> UC_Manage : <<extend>>
+UC_Submit .> UC_Manage : <<extend>>
+UC_Publish .> UC_Manage : <<extend>>
+UC_Reject .> UC_Manage : <<extend>>
 
-Author -- UC_Login
-Admin -- UC_Moderate
+' Acteurs
+Author -- UC_Auth
+Author -- UC_Manage
+
+Admin -- UC_Auth
+Admin -- UC_Manage
 @enduml

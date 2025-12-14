@@ -4,13 +4,23 @@ actor "Membre" as Member
 actor "Administrateur" as Admin
 
 package "Sprint 4 : Commentaires" {
+  usecase "Se connecter / S'inscrire" as UC_Auth
+  
   usecase "Poster un commentaire" as UC_Post
   usecase "Lire les commentaires" as UC_Read
-  usecase "Valider/Supprimer un commentaire" as UC_Moderate
+  
+  usecase "Gérer les Commentaires" as UC_Manage
+  usecase "Valider" as UC_Validate
+  usecase "Supprimer (Abus)" as UC_Delete
 }
 
+Member -- UC_Auth
 Member -- UC_Post
 Member -- UC_Read
 
-Admin -- UC_Moderate
+Admin -- UC_Auth
+Admin -- UC_Manage
+
+UC_Validate .> UC_Manage : <<extend>>
+UC_Delete .> UC_Manage : <<extend>>
 @enduml

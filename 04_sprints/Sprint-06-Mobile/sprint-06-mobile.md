@@ -8,8 +8,6 @@ Pour réussir ce Sprint, vous devez avoir validé la session de formation suivan
     *   *Acquis :* Création de l'application **"Ville Compagnon"** (Client News).
 
 ### 🔬 Labs & Veille
-*   🧪 **Lab Retrofit :** Consommer une API REST en Java/Kotlin.
-*   🧪 **Lab RecyclerView (ou LazyColumn) :** Afficher une liste performante.
 *   📚 **Veille Material Design :** Composants natifs Android (Cards, AppBar).
 
 ## 1. 📝 Besoin
@@ -29,27 +27,3 @@ Pour réussir ce Sprint, vous devez avoir validé la session de formation suivan
     *   UI : **Jetpack Compose** (Recommandé) ou XML.
     *   Réseau : **Retrofit**.
     *   Images : **Coil** ou Glide.
-
-## 4. 💻 Réalisation (Tâches Techniques)
-### ⚙️ Contraintes Techniques Critiques
-*   **Séparation des couches :** Modèle (Data Class) / Réseau (Interface API) / UI (Activity/Composable).
-*   **Manifest :** Ne pas oublier la permission `android.permission.INTERNET`.
-
-### Tâches Détaillées
-*   **Android Studio :**
-    *   [ ] Création projet "Empty Activity".
-    *   [ ] Dépendances : Retrofit, Gson Converter, Coil.
-    *   [ ] **Data Class :** `Article` (doit matcher le JSON du Sprint 5).
-    *   [ ] **Service API :** Interface Retrofit `getArticles()`.
-    *   [ ] **UI Liste :** Afficher Titre + Image miniature.
-    *   [ ] **UI Détail :** Afficher l'article complet.
-
-## Indice de solution
-(Retrofit Service)
-
-```kotlin
-interface ApiService {
-    @GET("api/articles")
-    suspend fun getArticles(): Response<ArticleResponse>
-}
-```

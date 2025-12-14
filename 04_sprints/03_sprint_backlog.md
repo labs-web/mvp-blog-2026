@@ -56,14 +56,16 @@ Il référence directement les **Cas d'Utilisation (UC)** validés en phase d'an
 
 ### 🧩 Cas d'Utilisation (UC)
 > [Voir Diagramme Auth](./Sprint-03-Auth/sprint-03-auth.puml)
-*   **UC_Login** : Se connecter (Admin/Auteur).
-*   **UC_Register** : S'inscrire.
-*   **UC_Moderate** : Modération (Admin peut tout voir, Auteur voit ses articles).
+*   **Se connecter / S'inscrire** : Accès sécurisé.
+*   **Gérer les permissions** : Distinction Admin/Auteur (RBAC).
+*   **Protection des routes** : Middlewares et Policies.
+*   **Administration Avancée** : Gérer Catégories, Tags et Utilisateurs.
 
 ### ⚙️ Tâches Techniques
-*   `laravel/ui` (Auth).
-*   `spatie/laravel-permission` (Rôles).
-*   Policies Laravel.
+*   Package **Laravel UI** (ou Breeze) pour les vues d'auth.
+*   Package **Spatie Permissions** pour la gestion des rôles.
+*   **Policies** : Sécurisation fine (ex: `ArticlePolicy`).
+*   **CRUD Admin** : Controllers pour Users, Categories, Tags.
 
 ---
 
@@ -73,13 +75,14 @@ Il référence directement les **Cas d'Utilisation (UC)** validés en phase d'an
 
 ### 🧩 Cas d'Utilisation (UC)
 > [Voir Diagramme Commentaires](./Sprint-04-Commentaires/sprint-04-commentaires.puml)
-*   **UC_PostComment** : Poster un commentaire.
-*   **UC_ReadComments** : Lire les commentaires d'un article.
-*   **UC_ModerateComment** : Valider/Supprimer un commentaire (Admin).
+*   **Poster un commentaire** : Interactions membres.
+*   **Lire les fils de discussion** : Affichage sous l'article.
+*   **Modération** : Suppression des contenus inappropriés.
 
 ### ⚙️ Tâches Techniques
-*   Relation `Article` -> `Comment`.
-*   Composant commentaire Blade.
+*   Relations Eloquent : `hasMany` Commentaires.
+*   **Composants Blade** : `<x-comment-item>` réutilisable.
+*   Directives `@auth` et `@can` pour l'interface.
 
 ---
 
@@ -89,13 +92,14 @@ Il référence directement les **Cas d'Utilisation (UC)** validés en phase d'an
 
 ### 🧩 Cas d'Utilisation (UC)
 > [Voir Diagramme API](./Sprint-05-API/sprint-05-api.puml)
-*   **UC_API_List** : GET /api/articles.
-*   **UC_API_Read** : GET /api/articles/{id}.
-*   **UC_API_Auth** : Login via Token.
+*   **Exposer les articles** : Endpoints JSON (Liste & Détail).
+*   **Authentification API** : Génération de Token (Sanctum).
+*   **Standardisation** : Formats de réponse uniformes.
 
 ### ⚙️ Tâches Techniques
-*   API Resources.
-*   Laravel Sanctum.
+*   **API Resources** : Transformation des modèles en JSON.
+*   **Laravel Sanctum** : Sécurisation Stateless.
+*   Gestion des erreurs HTTP (404, 401).
 
 ---
 
@@ -105,9 +109,11 @@ Il référence directement les **Cas d'Utilisation (UC)** validés en phase d'an
 
 ### 🧩 Cas d'Utilisation (UC)
 > [Voir Diagramme Mobile](./Sprint-06-Mobile/sprint-06-mobile.puml)
-*   **UC_Mobile_List** : Scroller le flux (via API).
-*   **UC_Mobile_Read** : Lire natif.
+*   **Voir le flux** : Liste des articles sur mobile.
+*   **Lecture Native** : Écran de détail optimisé.
+*   **Expérience Fluide** : Pull-to-refresh & Chargement rapide.
 
 ### ⚙️ Tâches Techniques
-*   Kotlin / Jetpack Compose.
-*   Retrofit Client.
+*   **Kotlin** & **Jetpack Compose** (UI Moderne).
+*   **Retrofit** : Consommation de l'API REST.
+*   **Coil** : Chargement des images.

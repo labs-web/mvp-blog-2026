@@ -8,7 +8,6 @@ Pour réussir ce Sprint, vous devez avoir validé la session de formation suivan
     *   *Acquis :* Création de l'API publique "Open Data" pour le Projet Ville.
 
 ### 🔬 Labs & Veille
-*   🧪 **Lab API Resources :** Transformer les modèles Eloquent en JSON standardisé.
 *   🧪 **Lab Sanctum :** Comprendre les tokens d'API.
 *   📚 **Veille HTTP :** Codes de statut (200, 201, 401, 404, 500) et verbes (GET, POST).
 
@@ -30,33 +29,3 @@ Pour réussir ce Sprint, vous devez avoir validé la session de formation suivan
 *   **Format de réponse :**
     *   `data` : Contient l'objet ou la liste.
     *   `meta` : (Optionnel) Pagination.
-
-## 4. 💻 Réalisation (Tâches Techniques)
-### ⚙️ Contraintes Techniques Critiques
-*   **API Resources :** Ne JAMAIS retourner directement le Modèle Eloquent (`return Article::all()` ⛔). Utiliser `ArticleResource`.
-*   **Gestion d'erreur :** Retourner un JSON propre même en cas d'erreur 404 (pas une page HTML Laravel).
-
-### Tâches Détaillées
-*   **Backend :**
-    *   [ ] `php artisan install:api` (Laravel 11/12).
-    *   [ ] `ArticleResource` : Définir les champs à exposer (id, titre, image_url, créateur).
-    *   [ ] `Api/ArticleController` : Méthodes `index`, `show`.
-    *   [ ] Route `login` pour générer un token Sanctum (pour tests futurs).
-*   **Tests :**
-    *   Tester avec **Postman**, **ThunderClient** ou **Insomnia**.
-
-## Indice de solution
-(Resource Example)
-
-```php
-public function toArray(Request $request): array
-{
-    return [
-        'id' => $this->id,
-        'title' => $this->title,
-        'image' => asset('storage/' . $this->image_path),
-        'author' => $this->user->name,
-        'published_at' => $this->created_at->toIso8601String(),
-    ];
-}
-```

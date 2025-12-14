@@ -15,10 +15,6 @@ package "Back-Office (Admin)" {
   usecase "Valider & Publier" as UC_Publish
 
   ' --- 3. Gestion Admin ---
-  usecase "Gérer les Catégories" as UC_Cats
-  usecase "Gérer les Tags" as UC_Tags
-  usecase "Gérer les Utilisateurs" as UC_Users
-  usecase "Attribuer un Rôle (Auteur/Admin)" as UC_Roles
   usecase "Modérer les Commentaires" as UC_Moderate
 }
 
@@ -31,11 +27,5 @@ UC_Submit .> UC_CRUD : <<extend>>
 UC_Publish .> UC_CRUD : <<extend>>
 
 ' Relations Admin
-Admin -- UC_Cats
-Admin -- UC_Tags
-Admin -- UC_Users
 Admin -- UC_Moderate
-
-UC_Roles .> UC_Users : <<extend>>
-
 @enduml

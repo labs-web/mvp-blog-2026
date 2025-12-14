@@ -20,10 +20,10 @@ Pour réussir ce Sprint, vous devez avoir validé la session de formation suivan
 
 ## 2. 🔍 Analyse
 *   **Cas d'Utilisation (Use Cases) :**
-    *   **Se connecter** : Accès sécurisé (Login Form).
-    *   **S'inscrire** : Création de compte (Register).
-    *   **Gérer les rôles** : Attribution des droits (Admin).
-    *   **Modérer** : Visibilité restreinte selon le rôle (Scope).
+    *   **Se connecter / S'inscrire** : Accès sécurisé.
+    *   **Gérer les Articles** : Socle commun avec permissions différenciées.
+    *   **Workflow Auteur** : Créer (Brouillon) et Soumettre à validation.
+    *   **Workflow Admin** : Valider, Publier ou Rejeter un article.
 *   **Diagramme :** [sprint-03-auth.puml](sprint-03-auth.puml)
 
 ## 3. 🏗️ Conception
@@ -42,7 +42,7 @@ Pour réussir ce Sprint, vous devez avoir validé la session de formation suivan
 
 ### Tâches Détaillées
 *   **Backend :**
-    *   [ ] Installation `laravel/ui` ou `breeze` (Vue Auth).
+    *   [ ] Installation `laravel/ui`.
     *   [ ] Installation `spatie/laravel-permission`.
     *   [ ] **Seeders :** Création des rôles `Admin` et `Author` + 1 SuperAdmin par défaut.
     *   [ ] `ArticlePolicy` : Définir `viewAny`, `update`, `delete`.
@@ -50,14 +50,3 @@ Pour réussir ce Sprint, vous devez avoir validé la session de formation suivan
     *   [ ] Vues Login/Register stylisées avec **Preline UI**.
     *   [ ] Adaptation du Layout Admin : Afficher le nom de l'utilisateur connecté + Bouton Logout.
     *   [ ] Directives Blade : `@can`, `@role` pour masquer les boutons non autorisés.
-
-## Indice de solution
-(Policy Example)
-
-```php
-public function update(User $user, Article $article)
-{
-    // L'admin peut tout modifier, l'auteur seulement ses propres articles
-    return $user->hasRole('admin') || $user->id === $article->user_id;
-}
-```

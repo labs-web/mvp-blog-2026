@@ -59,6 +59,7 @@ Cette phase se concentre sur la partie publique du site.
     *   *Livrable :* Création de la BDD complète du projet Ville avec jeux de données réalistes.
 
 > **🛑 Fin de Phase (Sprint 1) :** Réalisation en Groupe du **Sprint 1 - Visiteur & Découverte**.
+> [Voir Détails Sprint](./Sprint-01-Visiteur/Sprint-01-Visiteur.md)
 
 ---
 
@@ -75,6 +76,7 @@ Cette phase se concentre sur la partie publique du site.
     *   *Livrable :* Back-office complet pour gérer Lieux/Actualités (Upload, Validation, Recherche AJAX, Lang).
 
 > **🛑 Fin de Phase (Sprint 2) :** Réalisation en Groupe du **Sprint 2 : Publication (Back-Office sans Auth)**.
+> [Voir Détails Sprint](./Sprint-02-Publication/sprint-02-publication.md)
 
 ---
 
@@ -91,6 +93,7 @@ Cette phase se concentre sur la partie publique du site.
     *   *Livrable :* Sécurisation du Back-office (Admin seulement) et Espace Éditeur.
 
 > **🛑 Fin de Phase (Sprint 3) :** Réalisation en Groupe du **Sprint 3 : Authentification & Rôles**.
+> [Voir Détails Sprint](./Sprint-03-Auth/sprint-03-auth.md)
 
 ---
 
@@ -99,6 +102,7 @@ Cette phase se concentre sur la partie publique du site.
 *   *Note : Pas de session dédiée. Développement du Sprint 4 en autonomie / groupe.*
 
 > **🛑 Fin de Phase (Sprint 4) :** Réalisation en Groupe du **Sprint 4 : Commentaires & Communauté**.
+> [Voir Détails Sprint](./Sprint-04-Commentaires/sprint-04-commentaires.md)
 
 ---
 
@@ -113,6 +117,7 @@ Cette phase se concentre sur la partie publique du site.
     *   *Livrable :* API publique des Lieux touristiques (Sécurisée Sanctum).
 
 > **🛑 Fin de Phase (Sprint 5) :** Réalisation en Groupe du **Sprint 5 : API REST**.
+> [Voir Détails Sprint](./Sprint-05-API/sprint-05-api.md)
 
 ---
 
@@ -127,6 +132,7 @@ Cette phase se concentre sur la partie publique du site.
     *   *Livrable :* App Mobile affichant les news de la ville.
 
 > **🛑 Fin de Phase (Sprint 6) :** Réalisation en Groupe du **Sprint 6 : Application Mobile**.
+> [Voir Détails Sprint](./Sprint-06-Mobile/sprint-06-mobile.md)
 
 ---
 
