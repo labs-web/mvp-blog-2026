@@ -10,13 +10,15 @@ Il référence directement les **Cas d'Utilisation (UC)** validés en phase d'an
 
 ---
 
-## 🟢 Sprint 1 : Lecture & Découverte
+## 🟢 Sprint 1 : Visiteur & Découverte
 **Objectif :** Permettre aux visiteurs de découvrir et lire le contenu du blog.
 
 ### 🧩 Cas d'Utilisation (UC)
-> [Voir Diagramme Visiteur](mvp/uc-mvp-visiteur.puml)
+> [Voir Diagramme Visiteur](mvp/sprints/sprint-01-visiteur.puml)
 *   **UC_List** : Consulter la liste des articles (MVC basique).
 *   **UC_Read** : Lire un article (Détail).
+*   **UC_Search** : Rechercher des articles.
+*   **UC_Filter** : Filtrer (Catégorie / Tag).
 
 ### ⚙️ Tâches Techniques
 *   Setup Laravel 12 + Tailwind.

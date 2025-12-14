@@ -1,0 +1,21 @@
+@startuml
+left to right direction
+actor "Visiteur" as Guest
+actor "Auteur" as Author
+actor "Administrateur" as Admin
+
+Guest <|-- Author
+Author <|-- Admin
+
+package "Sprint 3 : Auth & Permissions" {
+  usecase "S'inscrire" as UC_Register
+  usecase "Se connecter" as UC_Login
+  usecase "Modérer les contenus (Vue Admin)" as UC_Moderate
+}
+
+Guest -- UC_Register
+Guest -- UC_Login
+
+Author -- UC_Login
+Admin -- UC_Moderate
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+left to right direction
+actor "Administrateur" as Admin
+
+package "Sprint 2 : Publication & Gestion" {
+  usecase "Gérer les articles (CRUD)" as UC_CRUD
+  usecase "Uploader une image" as UC_Media
+}
+
+Admin -- UC_CRUD
+Admin -- UC_Media
+@enduml

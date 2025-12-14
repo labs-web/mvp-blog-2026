@@ -47,10 +47,9 @@ Ce document structure la progression des 8 Sessions de formation, en appliquant 
     *   **MVP (Transposer)** : Intégrer une nouvelle entité simple (ex: "Partenaires") au schéma.
 *   **Proposition d'insertion :** *Finalisation du Sprint 1 (DB peuplée) et merge sur la branche develop.*
 
-### Description de Sprint 1 : 
+### Sprint 1 : 
 
-aprés la réalisation de session S2 et S4, c'est te temps de finalider Sprint 
-
+aprés la réalisation de session S2 et S4, c'est te temps de finalider Sprint réalisation de la partie pubic : visiteur 
 
 ### Session S5 : Espace Admin & CRUD
 *   **Lien Sprint :** Sprint 2 (Back-Office).
@@ -64,6 +63,7 @@ aprés la réalisation de session S2 et S4, c'est te temps de finalider Sprint
 
 ### Sprint 2 : 
 
+Réalisation de 
 
 
 ### Session S6 : Sécurité & Rôles

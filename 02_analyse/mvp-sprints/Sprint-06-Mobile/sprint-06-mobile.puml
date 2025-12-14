@@ -1,0 +1,12 @@
+@startuml
+left to right direction
+actor "Utilisateur Mobile" as MobileUser
+
+package "Sprint 6 : Application Mobile" {
+  usecase "Scroller le flux (Natif)" as UC_Scroll
+  usecase "Lire un article (Natif)" as UC_Read
+}
+
+MobileUser -- UC_Scroll
+MobileUser -- UC_Read
+@enduml

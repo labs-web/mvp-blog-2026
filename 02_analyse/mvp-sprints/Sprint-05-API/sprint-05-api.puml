@@ -1,0 +1,12 @@
+@startuml
+left to right direction
+actor "Système Externe" as System
+
+package "Sprint 5 : API REST" {
+  usecase "Récupérer les articles (JSON)" as UC_List
+  usecase "Authentification (Token)" as UC_Auth
+}
+
+System -- UC_List
+System -- UC_Auth
+@enduml

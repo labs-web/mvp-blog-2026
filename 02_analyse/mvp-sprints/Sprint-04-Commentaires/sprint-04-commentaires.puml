@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+actor "Membre" as Member
+actor "Administrateur" as Admin
+
+package "Sprint 4 : Commentaires" {
+  usecase "Poster un commentaire" as UC_Post
+  usecase "Lire les commentaires" as UC_Read
+  usecase "Valider/Supprimer un commentaire" as UC_Moderate
+}
+
+Member -- UC_Post
+Member -- UC_Read
+
+Admin -- UC_Moderate
+@enduml
