@@ -1,63 +1,105 @@
 ---
 title: "02_parcours_pedagogique.md"
-version: "v4.0"
-role: "Stratégie de Groupes & Répartition Pédagogique"
+version: "v5.0"
+role: "Stratégie Pédagogique Détaillée"
 ---
 
-# 🗺️ Stratégie de Groupes & Parcours de Réalisation
+# 🗺️ Guide du Parcours Pédagogique Solicode
 
-Afin d'adapter la pédagogie au rythme de chaque apprenant, la promotion est divisée en 3 groupes de travail pour le Projet Fil Rouge.
+Ce document détaille l'organisation de la formation, la méthodologie de travail et la stratégie de groupes pour le projet fil rouge.
 
-> 📺 **Présentation :** Un support de cours au format diorama est disponible dans le fichier [`02_parcours_pedagogique_slides.md`](./02_parcours_pedagogique_slides.md).
-
----
-
-## 🔁 Vue d'Ensemble
-
-```mermaid
-flowchart TD
-    Start([🚀 Démarrage Projet]) --> Tutos[📚 Validation Tutoriels]
-    Tutos --> Proto[🧩 Prototype Synthèse]
-    Proto --> Test{🎓 Test Technique}
-    
-    Test -- "✅ Succès" --> Choix{Choix Groupe}
-    Test -- "⚠️ Difficultés" --> G3_Route((Renforcement))
-    
-    Choix -- "Autonomie" --> G1[🏆 Groupe 1 : Full Project]
-    Choix -- "Technique" --> G2[⚙️ Groupe 2 : Dev Team]
-    
-    G1 --> Fin([Validation Titre])
-    G2 --> Fin
-    G3_Route --> G3_Step[🛠️ Parcours Remédiation] --> Fin
-```
+> 📺 **Version Présentation :** Un format "Slides" résumé est disponible ici : [`02_parcours_pedagogique_slides.md`](./slides/02_parcours_pedagogique_slides.md).
 
 ---
 
-## 1. 🎟️ Le Ticket d'Entrée
+## 1. 🎯 Le Grand Défi : "Projet Fil Rouge"
 
-Avant d'intégrer un groupe de production, chaque apprenant doit valider son socle technique :
+L'objectif de cette année est de valider votre **Titre Professionnel de Développeur Web & Mobile**. Pour cela, nous allons construire ensemble une plateforme complète :
 
-1.  **Tutoriels :** 100% des TPs rendus et fonctionnels.
-2.  **Prototype :** Capacité à assembler les briques MVC de base.
-3.  **Test Technique (Le "Permis de Coder") :**
-    *   QCM théorique.
-    *   **Live Coding** : Résolution d'un problème type en temps limité.
+### 📦 Le Projet : "Solicode Blog"
+Il s'agit d'un écosystème réaliste comprenant :
+1.  **Web Visiteur :** Un blog public moderne et performant (Laravel + Preline UI).
+2.  **Web Admin :** Un back-office de gestion puissant (Articles, Utilisateurs, Statistiques).
+3.  **API REST :** Une interface pour exposer les données au monde extérieur.
+4.  **Mobile :** Une application Android native (Kotlin / Jetpack Compose) connectée à l'API.
 
 ---
 
-## 2. 👥 Les 3 Groupes
+## 2. ⚡ La Méthode : "Double Réalisation"
+
+Pour réussir ce défi ambitieux, nous adoptons une stratégie en deux temps qui sépare l'apprentissage (droit à l'erreur) de la production (qualité professionnelle).
+
+### A. 🎓 Parcours Individuel (Formation)
+*   **Contexte :** Semaine de cours classique.
+*   **Support :** Vous travaillez sur votre **Projet Personnel** (ex: "Site de Ville" ou "Portfolio").
+*   **Objectif :** Acquérir les compétences techniques, tester, se tromper et apprendre.
+*   **Livrable :** Un projet individuel fonctionnel à la fin de chaque session (Niveau N3).
+
+### B. 🤝 Parcours Groupe (Production)
+*   **Contexte :** Fin de Phase (Sprint).
+*   **Support :** Vous travaillez en équipe sur le **"Solicode Blog"**.
+*   **Objectif :** Livrer un produit fini, propre et testé.
+*   **Exigence :** Qualité professionnelle, Code Review, Git Flow. **Ici, on ne "bricole" plus.**
+
+---
+
+## 3. 📅 La Roadmap : Phases & Sprints
+
+L'avancement du projet est rythmé par **6 Sprints** techniques :
+
+*   **🟢 Sprint 1 : Visiteur**
+    *   *Focus :* Interface Publique, Architecture MVC, Base de données.
+*   **🟡 Sprint 2 : Publication**
+    *   *Focus :* Back-Office Admin, CRUD Articles, Upload d'images.
+*   **🟠 Sprint 3 : Auth & Rôles**
+    *   *Focus :* Sécurisation, Permissions (Admin vs Auteur), Inscription.
+*   **🔵 Sprint 4 : Communauté**
+    *   *Focus :* Gestion des Commentaires, Modération.
+*   **🟣 Sprint 5 : API REST**
+    *   *Focus :* Exposition des données JSON pour l'extérieur.
+*   **📱 Sprint 6 : Mobile**
+    *   *Focus :* Création du client Android Natif.
+
+---
+
+## 4. 👥 La Stratégie des 3 Groupes
+
+Afin de respecter le rythme de chacun, la promotion est répartie en 3 groupes de travail pour les phases de production.
+
+### 🎫 Le Ticket d'Entrée
+L'accès aux groupes de production est conditionné par la validation des acquis de base :
+1.  **Tutoriels** réalisés à 100%.
+2.  **Prototype** fonctionnel.
+3.  **Test Technique** réussi.
+
+👉 **Si validé :** Vous choisissez librement entre le **Groupe 1** et le **Groupe 2**.
+👉 **Si non validé :** L'équipe pédagogique vous oriente vers le **Groupe 3**.
 
 ### 🏆 Groupe 1 : "Full Project" (Autonomie)
-*   **Pour qui ?** Les avancés qui veulent tout maîtriser.
-*   **Mission :** Tout faire de A à Z (Analyse, Design, Code, Deploy).
-*   **Livrable :** Un produit unique, customisé.
+> *"Je suis à l'aise techniquement et je veux tout maîtriser."*
+*   **Profil :** Apprenant avancé, autonome.
+*   **Mission :** Gérer l'intégralité du cycle de vie du projet (Conception -> Déploiement).
+*   **Objectif Pédagogique :** Développer une expertise de **Lead Dev / Tech Lead**.
 
-### 🚀 Groupe 2 : "Dev Team" (Focus Technique)
-*   **Pour qui ?** Ceux qui veulent coder sans perdre de temps sur les maquettes.
-*   **Mission :** Implémenter le cahier des charges officiel.
-*   **Ressources :** Maquettes et Conception fournies.
+### ⚙️ Groupe 2 : "Dev Team" (Focus Code)
+> *"J'aime coder, mais je ne veux pas perdre de temps sur les maquettes."*
+*   **Profil :** Apprenant pragmatique, focus technique.
+*   **Mission :** Produire le code en suivant strictement le cahier des charges et les maquettes fournies.
+*   **Objectif Pédagogique :** Devenir un **Développeur Rigoureux** ("Pixel Perfect").
 
-### 🛠️ Groupe 3 : "Renforcement" (Remédiation)
-*   **Pour qui ?** Ceux qui ont besoin de consolider les bases.
-*   **Mission :** Parcours guidé "Pas à pas".
-*   **Stratégie :** Répétition, Live Coding accompagné, Projet simplifié ("Soli-Light").
+### 🛠️ Groupe 3 : "Renforcement" (Guidé)
+> *"J'ai besoin de temps pour consolider mes bases."*
+*   **Profil :** Apprenant ayant besoin d'accompagnement.
+*   **Mission :** Suivre un parcours balisé et progressif sur un périmètre simplifié.
+*   **Objectif Pédagogique :** Sécuriser les **Fondamentaux** (MVC, Routes, BDD) avant d'aller plus loin.
+
+---
+
+## 5. 🚀 Conclusion
+
+Cette organisation est conçue pour que **chacun** puisse progresser et réussir.
+*   Si vous êtes en avance : **Challengez-vous** (G1).
+*   Si vous êtes au niveau : **Professionalisez-vous** (G2).
+*   Si vous avez des difficultés : **Consolidez vos bases** (G3).
+
+**Objectif Final Unique : Décrocher le Titre Professionnel !** 🎓
