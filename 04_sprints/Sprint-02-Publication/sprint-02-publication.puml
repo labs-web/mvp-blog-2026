@@ -1,12 +1,20 @@
 @startuml
 left to right direction
-actor "Administrateur" as Admin
+actor "Root" as User
 
-package "Sprint 2 : Publication & Gestion" {
-  usecase "Gérer les articles (CRUD)" as UC_CRUD
+package "Sprint 2 : Back-Office sans Sécurité" {
+  usecase "Gérer les Articles" as UC_CRUD
   usecase "Uploader une image" as UC_Media
+  usecase "Soumettre pour validation" as UC_Submit
+  usecase "Valider & Publier" as UC_Publish
+  usecase "Rechercher & Filtrer" as UC_Search
 }
 
-Admin -- UC_CRUD
-Admin -- UC_Media
+User -- UC_CRUD
+
+' Relations
+UC_CRUD ..> UC_Media : <<include>>
+UC_Submit .> UC_CRUD : <<extend>>
+UC_Publish .> UC_CRUD : <<extend>>
+UC_Search .> UC_CRUD : <<extend>>
 @enduml

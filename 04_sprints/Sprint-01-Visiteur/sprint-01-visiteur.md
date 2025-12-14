@@ -6,7 +6,9 @@ Pour réussir ce Sprint, vous devez avoir validé les sessions de formation suiv
 
 ### 🎓 Sessions de Formation
 *   ✅ **Session S3 :** Lancement Laravel & Interface Publique (Routing, Controller, Blade).
+    *   *Acquis :* Création du **"Portfolio Personnel"** (Site statique MVC avec Preline UI & Service Layer).
 *   ✅ **Session S4 :** Base de Données & Modèles (Migration, Eloquent).
+    *   *Acquis :* Création du socle Data **"Site de Ville"** (Relations complexes & Import CSV).
 
 ### 🔬 Labs & Veille
 *   🧪 **Lab Vite :** Savoir configurer et compiler Tailwind CSS pour le frontend.
@@ -21,19 +23,19 @@ Pour réussir ce Sprint, vous devez avoir validé les sessions de formation suiv
 
 ## 2. 🔍 Analyse
 *   **Cas d'Utilisation (Use Cases) :**
-    *   `UC_List` : Affichage grille des articles.
-    *   `UC_Read` : Page détail article.
-    *   `UC_Search` : Recherche dynamique (AJAX).
-    *   `UC_Filter` : Filtrage par Catégorie/Tag.
+    *   **Lister les articles** : Affichage grille des articles.
+    *   **Lire un article** : Page détail article.
+    *   **Rechercher** : Recherche dynamique (AJAX).
+    *   **Filtrer** : Filtrage par Catégorie/Tag.
 *   **Diagramme :** [sprint-01-visiteur.puml](sprint-01-visiteur.puml)
 
 ## 3. 🏗️ Conception
 *   **Base de Données / Modèles :**
-    *   > [Voir Diagramme de Classes](../../../03_conception/diagramme-classes.mmd)
+    *   > [Voir Diagramme de Classes](../../03_conception/diagramme-classes.mmd)
     *   **Entités :** `Article`, `Category`, `Tag`, `User` (Auteur), `Comment`, `Role`.
     *   **Relations clés :** Article-Category (n-1), Article-Tag (n-n), Article-User (n-1).
 *   **Maquettage UI :**
-    *   > [Voir Maquettes Publiques](../../../03_conception/maquettes-public/index.html)
+    *   > [Voir Maquettes Publiques](../../03_conception/maquettes-public/index.html)
     *   **Pages clés :** Accueil (`index`), Détail Article (`article`), Recherche (`search`).
 
 

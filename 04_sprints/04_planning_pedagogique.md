@@ -3,6 +3,9 @@ title: "04_planning_pedagogique.md"
 role: "Planning des Sessions de Formation (Phases et Sprints)"
 ---
 
+<!-- TODO  :ajouter le format de ce documen dans : 04_prompt.sprints.md -->
+
+
 # 🎓 Planning Pédagogique : Fil Rouge & Mini-Projets
 
 Ce document structure la formation selon la stratégie de **Double Réalisation** :
@@ -55,7 +58,7 @@ Cette phase se concentre sur la partie publique du site.
 *   **3️⃣ N3 (Transposer) : Projet "Site Ville" - Socle Data**
     *   *Livrable :* Création de la BDD complète du projet Ville avec jeux de données réalistes.
 
-> **🛑 Fin de Phase (Sprint 1) :** Réalisation en Groupe du **Sprint 1 Solicode** (Sprint 1 - Visiteur & Découverte).
+> **🛑 Fin de Phase (Sprint 1) :** Réalisation en Groupe du **Sprint 1 - Visiteur & Découverte**.
 
 ---
 
@@ -69,10 +72,9 @@ Cette phase se concentre sur la partie publique du site.
 *   **🧪 Live Coding : Filtres**
     *   *Challenge :* Filtrer la liste des articles par Catégorie.
 *   **3️⃣ N3 (Transposer) : Projet "Site Ville" - Admin**
-    *   *Livrable :* Back-office complet pour gérer Lieux/Actualités (Upload, Validation, Recherche AJAX).
-    *   lang 
+    *   *Livrable :* Back-office complet pour gérer Lieux/Actualités (Upload, Validation, Recherche AJAX, Lang).
 
-> **🛑 Fin de Phase (Sprint 2) :** Réalisation en Groupe du **Sprint 2 Solicode** (Sprint 2 : Publication (Back-Office sans Auth)).
+> **🛑 Fin de Phase (Sprint 2) :** Réalisation en Groupe du **Sprint 2 : Publication (Back-Office sans Auth)**.
 
 ---
 
@@ -88,16 +90,15 @@ Cette phase se concentre sur la partie publique du site.
 *   **3️⃣ N3 (Transposer) : Projet "Site Ville" - Accès**
     *   *Livrable :* Sécurisation du Back-office (Admin seulement) et Espace Éditeur.
 
-> **🛑 Fin de Phase (Sprint 3) :** Réalisation en Groupe du **Sprint 3 Solicode** (Sprint 3 : Authentification & Rôles).
+> **🛑 Fin de Phase (Sprint 3) :** Réalisation en Groupe du **Sprint 3 : Authentification & Rôles**.
 
 ---
 
 ## 🗓️ Phase 5 : Sprint 4 (Communauté & Membres)
 
+*   *Note : Pas de session dédiée. Développement du Sprint 4 en autonomie / groupe.*
 
-pas de session seulement le développement de Sprint 4
-
-> **� Fin de Phase (Sprint 4) :** Réalisation en Groupe du **Sprint 4 : Commentaires & Communauté**.
+> **🛑 Fin de Phase (Sprint 4) :** Réalisation en Groupe du **Sprint 4 : Commentaires & Communauté**.
 
 ---
 
@@ -125,8 +126,10 @@ pas de session seulement le développement de Sprint 4
 *   **3️⃣ N3 (Transposer) : App "Ville Compagnon"**
     *   *Livrable :* App Mobile affichant les news de la ville.
 
+> **🛑 Fin de Phase (Sprint 6) :** Réalisation en Groupe du **Sprint 6 : Application Mobile**.
 
-Sprint 6 : Mobile : Sprint 6 : Application Mobile
+---
 
+## 🗓️ Phase 8 : Clôture du Projet
 
-## Phase 8 : 🛑 Clôture du Projet :** Livraison Finale **Web + Mobile** du Projet Solicode.
+> **🚀 Livraison Finale :** Démo complète **Web + Mobile** du Projet Solicode déployée en Production.

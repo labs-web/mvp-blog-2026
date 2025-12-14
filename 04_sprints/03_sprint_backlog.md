@@ -12,39 +12,47 @@ Il référence directement les **Cas d'Utilisation (UC)** validés en phase d'an
 
 ## 🟢 Sprint 1 : Visiteur & Découverte
 **Objectif :** Permettre aux visiteurs de découvrir et lire le contenu du blog.
+> [Voir Détails Sprint](./Sprint-01-Visiteur/Sprint-01-Visiteur.md)
 
 ### 🧩 Cas d'Utilisation (UC)
 > [Voir Diagramme Visiteur](./Sprint-01-Visiteur/sprint-01-visiteur.puml)
-*   **UC_List** : Consulter la liste des articles (MVC basique).
-*   **UC_Read** : Lire un article (Détail).
-*   **UC_Search** : Rechercher des articles.
-*   **UC_Filter** : Filtrer (Catégorie / Tag).
+*   **Lister les articles** : Affichage grille des articles (MVC basique).
+*   **Lire un article** : Page détail article.
+*   **Rechercher** : Recherche dynamique (AJAX).
+*   **Filtrer** : Filtrage par Catégorie/Tag.
 
 ### ⚙️ Tâches Techniques
-*   Setup Laravel 12 + Tailwind.
+*   Setup Laravel 12 + Tailwind + **Preline UI**.
 *   Modèles & Migrations : `User`, `Article`, `Category`, `Tag`.
-*   Contrôleur `PublicController`.
+*   Contrôleur `PublicController` + **Service Layer** (`ArticleService`).
 *   Vues Blade : `home` (Grid), `article.show`.
+*   **AJAX** : Recherche instantanée.
 
 ---
 
 ## 🟡 Sprint 2 : Publication (Back-Office sans Auth)
 **Objectif :** Offrir une interface de gestion des contenus (CRUD) pour aborder les formulaires sans la complexité de sécurité.
+> [Voir Détails Sprint](./Sprint-02-Publication/sprint-02-publication.md)
 
 ### 🧩 Cas d'Utilisation (UC)
 > [Voir Diagramme Publication](./Sprint-02-Publication/sprint-02-publication.puml)
-*   **UC_CRUD_Article** : Créer, Modifier, Supprimer un article.
-*   **UC_Manage_Media** : Uploader une image de couverture.
+*   **Gérer les articles** : Créer, Modifier, Supprimer un article.
+*   **Uploader des médias** : Ajouter une image de couverture.
+*   **Soumettre / Publier** : Workflow de validation basique.
+*   **Rechercher & Filtrer** : UX dynamique (AJAX) sur le tableau de bord.
 
 ### ⚙️ Tâches Techniques
 *   Resource Controller : `ArticleController`.
-*   Formulaires Blade (Create/Edit).
-*   Storage Link (Images).
+*   **Service Layer** : Logique métier (Upload, Sauvegarde).
+*   **i18n** : Textes et messages de validation via fichiers de langue.
+*   **Layout Admin** : Structure spécifique (`layouts/admin.blade.php`).
+*   **AJAX** : Filtres et Recherche dynamique sur le tableau de bord.
 
 ---
 
 ## 🟠 Sprint 3 : Authentification & Rôles
 **Objectif :** Sécuriser l'accès et distinguer les droits entre Auteurs et Administrateurs.
+> [Voir Détails Sprint](./Sprint-03-Auth/sprint-03-auth.md)
 
 ### 🧩 Cas d'Utilisation (UC)
 > [Voir Diagramme Auth](./Sprint-03-Auth/sprint-03-auth.puml)
@@ -61,9 +69,10 @@ Il référence directement les **Cas d'Utilisation (UC)** validés en phase d'an
 
 ## 🔵 Sprint 4 : Commentaires & Communauté
 **Objectif :** Fédérer une communauté en permettant les échanges et la modération.
+> [Voir Détails Sprint](./Sprint-04-Commentaires/sprint-04-commentaires.md)
 
 ### 🧩 Cas d'Utilisation (UC)
-> [Voir Diagramme Commentaires](../04_sprints/Sprint-04-Commentaires/sprint-04-commentaires.puml)
+> [Voir Diagramme Commentaires](./Sprint-04-Commentaires/sprint-04-commentaires.puml)
 *   **UC_PostComment** : Poster un commentaire.
 *   **UC_ReadComments** : Lire les commentaires d'un article.
 *   **UC_ModerateComment** : Valider/Supprimer un commentaire (Admin).
@@ -76,9 +85,10 @@ Il référence directement les **Cas d'Utilisation (UC)** validés en phase d'an
 
 ## 🟣 Sprint 5 : API REST
 **Objectif :** Exposition des données.
+> [Voir Détails Sprint](./Sprint-05-API/sprint-05-api.md)
 
 ### 🧩 Cas d'Utilisation (UC)
-> [Voir Diagramme API](../04_sprints/Sprint-05-API/sprint-05-api.puml)
+> [Voir Diagramme API](./Sprint-05-API/sprint-05-api.puml)
 *   **UC_API_List** : GET /api/articles.
 *   **UC_API_Read** : GET /api/articles/{id}.
 *   **UC_API_Auth** : Login via Token.
@@ -91,9 +101,10 @@ Il référence directement les **Cas d'Utilisation (UC)** validés en phase d'an
 
 ## 📱 Sprint 6 : Application Mobile
 **Objectif :** Client Android.
+> [Voir Détails Sprint](./Sprint-06-Mobile/sprint-06-mobile.md)
 
 ### 🧩 Cas d'Utilisation (UC)
-> [Voir Diagramme Mobile](../04_sprints/Sprint-06-Mobile/sprint-06-mobile.puml)
+> [Voir Diagramme Mobile](./Sprint-06-Mobile/sprint-06-mobile.puml)
 *   **UC_Mobile_List** : Scroller le flux (via API).
 *   **UC_Mobile_Read** : Lire natif.
 

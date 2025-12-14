@@ -3,10 +3,12 @@ left to right direction
 actor "Utilisateur Mobile" as MobileUser
 
 package "Sprint 6 : Application Mobile" {
-  usecase "Scroller le flux (Natif)" as UC_Scroll
-  usecase "Lire un article (Natif)" as UC_Read
+  usecase "Voir le flux (API)" as UC_Scroll
+  usecase "Lire un article" as UC_Read
+  usecase "Rafraîchir (Pull-to-refresh)" as UC_Refresh
 }
 
 MobileUser -- UC_Scroll
 MobileUser -- UC_Read
+MobileUser -- UC_Refresh
 @enduml
