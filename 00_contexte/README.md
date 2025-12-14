@@ -27,4 +27,5 @@ Pour visualiser correctement la documentation, les diagrammes et les présentati
 ## 📄 Contenu du dossier
 
 *   **`01_contexte_global.md`** : La "Bible" du projet. Contient l'identité Solicode, les standards techniques (C1-C7) et les règles du jeu.
-*   **`02_parcours_pedagogique.md`** : Description de la stratégie des groupes (1, 2, 3) et slides de présentation pour la classe.
+*   **`02_parcours_pedagogique.md`** : Description détaillée de la stratégie pédagogique.
+*   **`02_parcours_pedagogique_slides.md`** : Support de présentation pour la classe (format Slides/Marp).

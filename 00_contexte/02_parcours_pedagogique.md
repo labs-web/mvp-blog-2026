@@ -1,13 +1,14 @@
 ---
 title: "02_parcours_pedagogique.md"
-version: "v3.0"
-role: "Stratégie Pédagogique & Slides de Présentation"
-marp: true
+version: "v4.0"
+role: "Stratégie de Groupes & Répartition Pédagogique"
 ---
 
 # 🗺️ Stratégie de Groupes & Parcours de Réalisation
 
 Afin d'adapter la pédagogie au rythme de chaque apprenant, la promotion est divisée en 3 groupes de travail pour le Projet Fil Rouge.
+
+> 📺 **Présentation :** Un support de cours au format diorama est disponible dans le fichier [`02_parcours_pedagogique_slides.md`](./02_parcours_pedagogique_slides.md).
 
 ---
 
@@ -60,94 +61,3 @@ Avant d'intégrer un groupe de production, chaque apprenant doit valider son soc
 *   **Pour qui ?** Ceux qui ont besoin de consolider les bases.
 *   **Mission :** Parcours guidé "Pas à pas".
 *   **Stratégie :** Répétition, Live Coding accompagné, Projet simplifié ("Soli-Light").
-
----
----
-
-# 📺 ESPACE PRÉSENTATION (SLIDES)
-
-*(Utilisez le mode "Aperçu de la présentation" ou exportez en PDF pour projeter)*
-
----
-
-# 🚀 Projet Fil Rouge : Organisation
-## Stratégie de Réussite & Groupes
-
----
-
-## 🎯 Notre Objectif Commun
-
-> **Valider le Titre Professionnel**
-
-Mais nous n'avons pas tous le même rythme.
-👉 **Solution : 3 Voies pour 1 Destination.**
-
----
-
-## 🗺️ Le Parcours en un clin d'œil
-
-<div align="center">
-
-```mermaid
-flowchart LR
-    Start([Départ]) --> Test{Test}
-    Test --> G1[G1: Full]
-    Test --> G2[G2: Dev]
-    Test --> G3[G3: Soutien]
-    G1 & G2 & G3 --> Goal([🏆 Titre])
-```
-
-</div>
-
----
-
-## 🎟️ Étape 1 : Le Ticket d'Entrée
-
-Pour lancer le projet, il faut prouver sa capacité à suivre.
-
-*   ✅ **Tutoriels à jour** (Dette technique = 0)
-*   ✅ **Prototype maîtrisé**
-*   ✅ **Test Technique validé**
-
----
-
-## 🏆 Groupe 1 : "Full Project"
-
-**"Je veux être Architecte de ma solution"**
-
-*   **Profil :** Autonome, Avancé.
-*   **Départ :** Page Blanche.
-*   **Challenge :** Gérer tout le cycle (Besoin utilisateur -> Mise en prod).
-
----
-
-## ⚙️ Groupe 2 : "Dev Team"
-
-**"Je veux être un Développeur efficace"**
-
-*   **Profil :** Pragmatique, focus Technique.
-*   **Départ :** Git Repository (Conception fournie).
-*   **Challenge :** Produire un code propre, testé et aux standards pro.
-
----
-
-## 🛠️ Groupe 3 : "Renforcement"
-
-**"Je veux consolider mes bases"**
-
-*   **Profil :** Besoin d'accompagnement.
-*   **Stratégie :** "Learning by Repeating".
-*   **Programme :**
-    1.  Reprise des bases (MVC, Routing).
-    2.  Live Coding tutoré.
-    3.  Projet adapté ("Soli-Light").
-
----
-
-## 📅 Prochaines Étapes
-
-1.  **Aujourd'hui :** Finalisation des Tutos.
-2.  **Lundi :** Test Technique (QCM + Code).
-3.  **Mardi :** Lancement des Groupes !
-
-**À vous de jouer ! 🚀**
