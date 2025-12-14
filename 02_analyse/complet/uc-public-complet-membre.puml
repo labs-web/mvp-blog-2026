@@ -5,28 +5,24 @@ actor "Membre" as Member
 
 Guest <|-- Member
 
-package "Front-Office (Web Public)" {
-  usecase "Consulter la liste des articles" as UC_List
-  usecase "Lire un article (Détail)" as UC_Read
-  
-  usecase "Rechercher des articles (AJAX)" as UC_Search
-  usecase "Filtrer (Catégorie / Tag)" as UC_Filter
-  
+package "Espace Membre & Interaction" {
+  ' Authentification
   usecase "Se connecter (Email / Google / GitHub)" as UC_Login
   usecase "S'inscrire" as UC_Register
   usecase "Réinitialiser mot de passe" as UC_ResetPwd
   
-  usecase "Lire les commentaires" as UC_ReadComments
-  usecase "Poster un commentaire" as UC_PostComment
-  
+  ' Interactions
+  usecase "Lire un article" as UC_Read
   usecase "Ajouter aux favoris" as UC_AddFavorite
-  usecase "Voir son Profil" as UC_Profile
+  usecase "Poster un commentaire" as UC_PostComment
+  usecase "Lire les commentaires" as UC_ReadComments
   usecase "Partager sur les réseaux" as UC_Share
+  
+  ' Profil
+  usecase "Voir son Profil" as UC_Profile
 }
 
-' Relations Visiteur
-Guest -- UC_List
-Guest -- UC_Read
+' Relations Auth (Accessible au visiteur)
 Guest -- UC_Login
 Guest -- UC_Register
 Guest -- UC_ResetPwd
@@ -36,15 +32,13 @@ Member -- UC_PostComment
 Member -- UC_AddFavorite
 Member -- UC_Profile
 
-' -- Relations <<extend>> --
-UC_Search .> UC_List : <<extend>>
-UC_Filter .> UC_List : <<extend>>
-UC_ReadComments .> UC_Read : <<extend>>
-UC_PostComment .> UC_Read : <<extend>>
+' Extensions sur la lecture
 UC_AddFavorite .> UC_Read : <<extend>>
+UC_PostComment .> UC_Read : <<extend>>
+UC_ReadComments .> UC_Read : <<extend>>
 UC_Share .> UC_Read : <<extend>>
 
-' -- Relations <<include>> --
+' Inclusions Auth
 UC_PostComment ..> UC_Login : <<include>>
 UC_AddFavorite ..> UC_Login : <<include>>
 
