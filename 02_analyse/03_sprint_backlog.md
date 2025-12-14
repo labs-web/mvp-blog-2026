@@ -14,7 +14,7 @@ Il référence directement les **Cas d'Utilisation (UC)** validés en phase d'an
 **Objectif :** Permettre aux visiteurs de découvrir et lire le contenu du blog.
 
 ### 🧩 Cas d'Utilisation (UC)
-> [Voir Diagramme Visiteur](mvp/sprints/sprint-01-visiteur.puml)
+> [Voir Diagramme Visiteur](mvp-sprints/Sprint-01-Visiteur/sprint-01-visiteur.puml)
 *   **UC_List** : Consulter la liste des articles (MVC basique).
 *   **UC_Read** : Lire un article (Détail).
 *   **UC_Search** : Rechercher des articles.
@@ -32,6 +32,7 @@ Il référence directement les **Cas d'Utilisation (UC)** validés en phase d'an
 **Objectif :** Offrir aux administrateurs un outil pour publier et gérer les articles.
 
 ### 🧩 Cas d'Utilisation (UC)
+> [Voir Diagramme Publication](mvp-sprints/Sprint-02-Publication/sprint-02-publication.puml)
 *   **UC_CRUD_Article** : Créer, Modifier, Supprimer un article (Backend).
 *   **UC_Manage_Media** : Uploader une image de couverture.
 
@@ -46,7 +47,7 @@ Il référence directement les **Cas d'Utilisation (UC)** validés en phase d'an
 **Objectif :** Sécuriser l'accès et distinguer les droits entre Auteurs et Administrateurs.
 
 ### 🧩 Cas d'Utilisation (UC)
-> [Voir Diagramme Membre](mvp/uc-mvp-membre.puml)
+> [Voir Diagramme Auth](mvp-sprints/Sprint-03-Auth/sprint-03-auth.puml)
 *   **UC_Login** : Se connecter (Admin/Auteur).
 *   **UC_Register** : S'inscrire.
 *   **UC_Moderate** : Modération (Admin peut tout voir, Auteur voit ses articles).
@@ -62,7 +63,7 @@ Il référence directement les **Cas d'Utilisation (UC)** validés en phase d'an
 **Objectif :** Fédérer une communauté en permettant les échanges et la modération.
 
 ### 🧩 Cas d'Utilisation (UC)
-> [Voir Diagramme Membre](mvp/uc-mvp-membre.puml)
+> [Voir Diagramme Commentaires](mvp-sprints/Sprint-04-Commentaires/sprint-04-commentaires.puml)
 *   **UC_PostComment** : Poster un commentaire.
 *   **UC_ReadComments** : Lire les commentaires d'un article.
 *   **UC_ModerateComment** : Valider/Supprimer un commentaire (Admin).
@@ -77,6 +78,7 @@ Il référence directement les **Cas d'Utilisation (UC)** validés en phase d'an
 **Objectif :** Exposition des données.
 
 ### 🧩 Cas d'Utilisation (UC)
+> [Voir Diagramme API](mvp-sprints/Sprint-05-API/sprint-05-api.puml)
 *   **UC_API_List** : GET /api/articles.
 *   **UC_API_Read** : GET /api/articles/{id}.
 *   **UC_API_Auth** : Login via Token.
@@ -91,6 +93,7 @@ Il référence directement les **Cas d'Utilisation (UC)** validés en phase d'an
 **Objectif :** Client Android.
 
 ### 🧩 Cas d'Utilisation (UC)
+> [Voir Diagramme Mobile](mvp-sprints/Sprint-06-Mobile/sprint-06-mobile.puml)
 *   **UC_Mobile_List** : Scroller le flux (via API).
 *   **UC_Mobile_Read** : Lire natif.
 

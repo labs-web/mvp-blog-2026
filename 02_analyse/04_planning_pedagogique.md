@@ -31,21 +31,24 @@ Ce document structure la progression des 8 Sessions de formation, en appliquant 
 
 ### Session S3 : Lancement Laravel (Interface Publique)
 *   **Lien Sprint :** Sprint 1 (Socle & Lecture).
-*   **Description :** Mise en place du MVC Laravel sans base de données (données simulées).
-*   **Approche :**
-    *   **N1 (Imiter)** : Route -> Contrôleur (Tableau PHP) -> Vue Blade.
-    *   **N2 (Adapter)** : Modifier la vue (CSS, Badges) et la structure du tableau simulé.
-    *   **MVP (Transposer)** : Concevoir une mini-interface publique pour un autre contexte.
-*   **Proposition d'insertion :** *Démarrage du Sprint 1 technique en fin de session, avec initialisation du repository Git Flow.*
+*   **Concepts Clés :** MVC, Routing, Controller, Blade.
+*   **Approche Pédagogique (N1 Portfolio) :**
+    *   **Objectif :** Réaliser un **Portfolio** statique (Accueil, Projets, Contact).
+    *   **Imiter (N1) :** Reproduire un layout Blade et des routes basiques.
+    *   **Adapter (N2) :** Personnaliser le portfolio avec des données mockées (tableau PHP).
+    *   **Transposer (MVP - Sprint 1) :** *Initialiser le repo du projet fil rouge et créer la page "Home" statique.*
 
 ### Session S4 : Base de Données & Modèles
 *   **Lien Sprint :** Sprint 1 (Suite - DB).
-*   **Description :** Connexion MySQL, Migrations `artles`, `users` et Eloquent.
-*   **Approche :**
-    *   **N1 (Imiter)** : Configurer DB, migrer, afficher des articles "réels".
-    *   **N2 (Adapter)** : Ajouter un champ en base (migration), mettre à jour la vue.
-    *   **MVP (Transposer)** : Intégrer une nouvelle entité simple (ex: "Partenaires") au schéma.
-*   **Proposition d'insertion :** *Finalisation du Sprint 1 (DB peuplée) et merge sur la branche develop.*
+*   **Concepts Clés :** Migration, Eloquent, Seeder, Factory.
+*   **Approche Pédagogique (N1 Inventaire) :**
+    *   **Objectif :** Réaliser la base de données du MVP + Jeux de test.
+    *   **Imiter (N1) :** Créer une table simple `games` et la peupler via Factory.
+    *   **Adapter (N2) :** Créer les migrations complexes du MVP (`articles`, `categories`).
+    *   **Transposer (MVP - Sprint 1) :** *Connecter le "Home" du Sprint 1 à la vraie base de données.*
+
+> **🚀 Point de synchronisation :** À la fin de S4, les apprenants doivent avoir validé les bases MVC + DB via les mini-projets (Portfolio/Inventaire) et être prêts à finaliser le **Sprint 1 (Visiteur)** sur le projet fil rouge.
+> *Travail connexe : Labs Vite/AJAX & Veille UX/UI durant ces sessions.*
 
 ### Sprint 1 : 
 
