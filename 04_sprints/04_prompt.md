@@ -29,16 +29,17 @@ Chaque session technique doit suivre strictement cette progression en 3 temps :
     *   🚀 **Rôle :** C'est le **Prototype** technique qui valide la faisabilité avant le grand projet.
 *   **Exemple S3 :** Refonte de la Page Accueil avec Preline UI, découpage en Layout `app.blade.php`.
 
-### 🧪 Live Coding (Validation N2)
-*   **Objectif :** Vérifier l'acquisition immédiate des compétences N2 en direct.
-*   **Format :** Un défi court (45 min) sur une tâche précise du N2 (ex: "Créez un composant Button Blade").
+### 🧪 Live Coding (Validation N2 > Vers N3)
+*   **Objectif :** Réaliser en direct une fonctionnalité clé du futur Mini-Projet N3 (brique manquante du N2).
+*   **Format :** Un défi (45 min) consistant à développer une fonctionnalité réelle du Mini-Projet (ex: "Page Détail").
 
 ### 3️⃣ Niveau 3 (Transposer) : "L'Architecture Complète"
-*   **Objectif :** Réaliser un projet complet et robuste (Mini-Projet Individuel).
+*   **Objectif :** Réaliser un projet complet qui prépare directement le Sprint de la Phase.
+*   **Alignement :** Le Mini-Projet N3 est une **version individuelle** du Sprint que le groupe devra livrer en fin de phase.
+    *   *Exemple :* Si le Sprint de Phase est "Blog Visiteur", le N3 est "Site Vitrine Ville".
 *   **Contraintes Techniques :**
-    *   ✅ **Architecture Stricte Obligatoire :** Utilisation de la **Couche Service** (Business Logic déportée).
-    *   ✅ **Code Propre :** Respect strict des conventions (PSR, Naming).
-    *   🏆 **Livrable :** Un mini-projet fonctionnel et déployable.
+    *   ✅ **Architecture Stricte Obligatoire :** Utilisation de la **Couche Service**.
+    *   🏆 **Livrable :** Un mini-projet fonctionnel couvrant les mêmes UCs que le Sprint cible.
 *   **Exemple S3 :** Portfolio complet (Home, Services, Contact) utilisant `PortfolioService` pour nourrir les vues.
 
 ---
