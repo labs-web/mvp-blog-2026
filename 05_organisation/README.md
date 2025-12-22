@@ -21,8 +21,21 @@ Tous les membres du groupe doivent valider les compétences techniques et métho
     *   Diagrammes de Cas d'Utilisation (Use Cases).
     *   Maquettage UI/UX (Validation client).
     *   Diagrammes de Classes (Validation architecture).
-4.  **Réalisation** : Développement propre, tests et BDD.
+4. Test des maquettes avec les utilisateurs
+5.  **Réalisation** : Développement propre, tests et BDD.
 
+
+Les apprenant doit appliquer cette méthodologie pour chaque fonctionnalité à développer.
+
+en utilisant le cycle de vie suivant :
+
+1. Labs : Description et réalisation des lab : dans un sous dossier et un fichier README.md
+2. Fonctionnalité : Description et réalisation de la fonctionnalité : dans un sous dossier et un fichier README.md avec diagramme de cas
+3. Maquette : Description et réalisation de la maquette : dans un sous dossier et un fichier README.md
+4. Validation : Validation de la maquette : dans un sous dossier et un fichier README.md
+5. Réalisation : Description et réalisation de la réalisation : dans un sous dossier et un fichier README.md
+
+README.md : Travail à faire : Description de travail à faire dans un fichier, généralement, un fichier README.md
 ---
 
 ## 2. 📂 Stratégie Git & Branches
@@ -48,15 +61,18 @@ Cette branche doit contenir une structure de dossiers normalisée pour documente
 ├── 01_fonctionnalite/     # Cas d'utilisation à développer
 ├── 02_labs/               # Exercices et prototypes techniques
 ├── 03_maquette/           # Maquettes et comptes-rendus validation
-├── 04_realisation/        # Code source, DB scripts, Tests
+├── 04_validation/           # Maquettes et comptes-rendus validation
+├── 05_realisation/        # Code source, DB scripts, Tests
 └── README.md              # Journal de bord de la tâche
 ```
 
 ---
 
-## 3. 📝 Le Journal de Bord Individuel (`README.md`)
+## 3. 📝 Rappel de travail à faire (`README.md`)
 
-À la racine de votre branche individuelle, le fichier `README.md` doit toujours être à jour. Il sert de tableau de bord pour le Lead Dev (Formateur).
+
+C'est le premier document réaliser, il présente les 5 tâche à réaliser, 
+il est écrir avant de réaliser les autres tâche et la structuration des sous dossiers, pour valider que chaque apprenant à compris son tâche
 
 **Structure type du README.md :**
 
@@ -65,7 +81,6 @@ Cette branche doit contenir une structure de dossiers normalisée pour documente
 
 ## 🛠 Résumé du Travail
 - **Fonctionnalité** : [Nom du module, ex: Gestion Commentaires]
-- **État** : [En cours / Validé / Bloqué]
 
 ## 🧪 1. Labs Techniques
 Liste des concepts techniques validés avant de commencer :
@@ -76,8 +91,7 @@ Liste des concepts techniques validés avant de commencer :
 - Lien vers les maquettes : [Lien]
 - **Validation Client** : 
     - Date : [JJ/MM/AAAA]
-    - Acteurs présents : [Noms]
-    - Remarques : [Liste des retours]
+
 
 ## 🏗 3. Conception & Réalisation
 - Classe Services identifiées : [Liste des méthodes]
